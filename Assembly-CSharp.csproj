@@ -60,6 +60,7 @@
     <Compile Include="Assets/Scripts/TruckController.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets/Single_detailed_truck/readme.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
