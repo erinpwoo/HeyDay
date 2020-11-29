@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/CameraController.cs" />
     <Compile Include="Assets/Scripts/TruckController.cs" />
+    <Compile Include="Assets/Scripts/CatapultController.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/Single_detailed_truck/readme.txt" />
