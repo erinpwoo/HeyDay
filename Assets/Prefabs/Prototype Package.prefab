@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4413795610428256713}
   - component: {fileID: 4413795610428256714}
   - component: {fileID: 4413795610428256715}
+  - component: {fileID: 1226120248}
   m_Layer: 0
   m_Name: Prototype Package
   m_TagString: Untagged
@@ -125,3 +126,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acddb9aa81f8647fc9082ce69068f852, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1226120248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4413795610428256708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 832c8e5eabec9462cb14337d8d5db873, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 10
+  destination: {fileID: 0}
+  player: {fileID: 0}
+  timeLimit: 60
