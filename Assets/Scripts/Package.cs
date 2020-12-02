@@ -13,7 +13,9 @@ public class Package : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        pointsText = GameObject.FindGameObjectWithTag("Points UI").GetComponent<Text>();
+        destination = GameObject.FindGameObjectWithTag("House");
     }
 
     // Update is called once per frame
