@@ -7,6 +7,9 @@ TagManager:
   - Points UI
   - Package spawn
   - House
+  - Buildings
+  - No-rush
+  - Standard
   layers:
   - Default
   - TransparentFX

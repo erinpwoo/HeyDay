@@ -1,15 +1,17 @@
-﻿<Properties>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Package.cs">
+﻿<Properties StartupConfiguration="{04D39242-4649-988B-88BE-E2CFBC165599}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Cardboard realistic boxes [HQ,Free]/SCG_Showcase_Modules/Standard Assets/Effects/CinematicEffects(BETA)/DepthOfField/DepthOfField.cs">
     <Files>
       <File FileName="Assets/Scripts/CameraController.cs" Line="30" Column="6" />
       <File FileName="Assets/Scripts/TruckController.cs" />
-      <File FileName="Assets/Scripts/Package.cs" Line="24" Column="9" />
       <File FileName="Assets/Scripts/Player.cs" />
+      <File FileName="Assets/Scripts/Building.cs" Line="8" Column="1" />
+      <File FileName="Assets/Scripts/LevelController.cs" />
+      <File FileName="Assets/Cardboard realistic boxes [HQ,Free]/SCG_Showcase_Modules/Standard Assets/Effects/CinematicEffects(BETA)/DepthOfField/DepthOfField.cs" Line="470" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="30e06d49-4dc4-4ce2-9c08-52622f3ad288" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="6e9c6cdb-b60d-4556-ab49-9958952e07f6" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

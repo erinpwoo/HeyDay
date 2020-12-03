@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// Main game and player logic
 public class Player : MonoBehaviour
 {
     public int points;
     public int currPackageIndex;
-    private Package currPackage;
-    public Package[] availablePackages;
+    private GameObject currPackage;
+    public GameObject[] availablePackages;
     public GameObject spawnLocation;
-    //public Image currPackageUI;
-    //public RawImage[] packageUIs;
+    public Transform[] buildings;
     
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
         currPackageIndex = 0;
         spawnLocation = GameObject.FindGameObjectWithTag("Package spawn");
         currPackage = availablePackages[currPackageIndex];
+        buildings = GameObject.FindGameObjectWithTag("Buildings").GetComponentsInChildren<Transform>();
     }
 
     // Update is called once per frame
