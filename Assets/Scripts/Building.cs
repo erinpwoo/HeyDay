@@ -10,13 +10,13 @@ public class Building : MonoBehaviour
     public GameObject timerPrefab;
     public Transform timerPosition;
     public GameObject timer;
+    public bool isTimerRunning;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         timerPosition = transform.parent.Find("Timer position");
-        SpawnOrder("No rush");
-
+        isTimerRunning = false;
     }
 
     private void Update()
@@ -26,6 +26,10 @@ public class Building : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (requestedPackageType == null)
+        {
+            return;
+        }
         if (collision.gameObject.CompareTag("No-rush"))
         {
             if (requestedPackageType == "No rush")
@@ -33,6 +37,7 @@ public class Building : MonoBehaviour
                 player.points += 10;
                 timer.GetComponent<Bar>().CancelBarTimer();
                 Destroy(timer);
+                isTimerRunning = false;
             }
         }
         else if (collision.gameObject.CompareTag("Standard"))
@@ -41,6 +46,8 @@ public class Building : MonoBehaviour
             {
                 player.points += 15;
                 timer.GetComponent<Bar>().CancelBarTimer();
+                Destroy(timer);
+                isTimerRunning = false;
             }
         }
         player.UpdatePointsUI();
@@ -48,6 +55,7 @@ public class Building : MonoBehaviour
 
     public void SpawnOrder(string packageType)
     {
+        isTimerRunning = true;
         timer = Instantiate(timerPrefab, timerPosition);
         if (packageType == "No rush")
         {

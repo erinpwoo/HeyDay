@@ -35,6 +35,7 @@ public class Bar : MonoBehaviour
         isTimerUp = true;
         LeanTween.cancel(bar);
         building.DecrementPoints();
+        building.isTimerRunning = false;
         Destroy(timer);
     }
 
