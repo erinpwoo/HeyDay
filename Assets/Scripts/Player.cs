@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public GameObject[] availablePackages;
     public GameObject spawnLocation;
     public Transform[] buildings;
+    public Text pointsUI;
     
     // Start is called before the first frame update
     void Start()
@@ -20,6 +21,7 @@ public class Player : MonoBehaviour
         spawnLocation = GameObject.FindGameObjectWithTag("Package spawn");
         currPackage = availablePackages[currPackageIndex];
         buildings = GameObject.FindGameObjectWithTag("Buildings").GetComponentsInChildren<Transform>();
+        pointsUI = GameObject.FindGameObjectWithTag("Points UI").GetComponent<Text>();
     }
 
     // Update is called once per frame
@@ -48,6 +50,11 @@ public class Player : MonoBehaviour
             }
             currPackage = Instantiate(availablePackages[currPackageIndex], spawnLocation.transform.position, spawnLocation.transform.rotation);
         }
+    }
+
+    public void UpdatePointsUI()
+    {
+        pointsUI.text = "Points: " + points;
     }
 
 }

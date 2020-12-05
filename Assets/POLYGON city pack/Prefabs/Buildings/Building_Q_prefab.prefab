@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33232334571540092}
   - component: {fileID: 23953427513632018}
   - component: {fileID: 64926066623242016}
+  - component: {fileID: 926842449}
   m_Layer: 0
   m_Name: Building_Q
   m_TagString: Untagged
@@ -108,6 +109,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ae99bed506348de4d83879e6cc70874e, type: 3}
+--- !u!114 &926842449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1112206945803808}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestedPackageType: 
+  player: {fileID: 0}
+  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
+  timerPosition: {fileID: 7464534125830651497}
 --- !u!1 &1970175596446060
 GameObject:
   m_ObjectHideFlags: 0

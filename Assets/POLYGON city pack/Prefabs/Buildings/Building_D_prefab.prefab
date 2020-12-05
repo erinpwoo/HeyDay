@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33545616392507590}
   - component: {fileID: 23338079925027170}
   - component: {fileID: 64865604194299092}
+  - component: {fileID: 882859376}
   m_Layer: 0
   m_Name: Building_D
   m_TagString: Untagged
@@ -108,6 +109,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: f98ff50ea1b6a7140860381375972449, type: 3}
+--- !u!114 &882859376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135358366631424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestedPackageType: 
+  player: {fileID: 0}
+  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
+  timerPosition: {fileID: 2694230387933181099}
 --- !u!1 &1248084678627422
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +134,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4984302113942590}
-  - component: {fileID: 429594642}
   m_Layer: 0
   m_Name: Building_D_prefab
   m_TagString: Untagged
@@ -141,23 +157,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &429594642
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248084678627422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requestedPackageType: 
-  timer: 0
-  player: {fileID: 0}
-  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
-  timerPosition: {fileID: 2694230387933181099}
 --- !u!1 &7574344262356877834
 GameObject:
   m_ObjectHideFlags: 0

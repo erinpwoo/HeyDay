@@ -9,11 +9,12 @@ public class Building : MonoBehaviour
     public Player player;
     public GameObject timerPrefab;
     public Transform timerPosition;
+    public GameObject timer;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
-        timerPosition = transform.Find("Timer position");
+        timerPosition = transform.parent.Find("Timer position");
         SpawnOrder("No rush");
 
     }
@@ -23,26 +24,31 @@ public class Building : MonoBehaviour
         
     }
 
-    public void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("No rush"))
+        if (collision.gameObject.CompareTag("No-rush"))
         {
             if (requestedPackageType == "No rush")
             {
                 player.points += 10;
+                timer.GetComponent<Bar>().CancelBarTimer();
+                Destroy(timer);
             }
-        } else if (collision.gameObject.CompareTag("Standard"))
+        }
+        else if (collision.gameObject.CompareTag("Standard"))
         {
             if (requestedPackageType == "Standard")
             {
                 player.points += 15;
+                timer.GetComponent<Bar>().CancelBarTimer();
             }
         }
+        player.UpdatePointsUI();
     }
 
     public void SpawnOrder(string packageType)
     {
-        GameObject timer = Instantiate(timerPrefab, timerPosition);
+        timer = Instantiate(timerPrefab, timerPosition);
         if (packageType == "No rush")
         {
             timer.GetComponent<Bar>().time = 60;
@@ -51,7 +57,20 @@ public class Building : MonoBehaviour
             timer.GetComponent<Bar>().time = 50;
         }
         requestedPackageType = packageType;
-        timer.GetComponent<Bar>().AnimateBar();
+        timer.GetComponent<Bar>().AnimateBar(timer, this);
+    }
+
+    public void DecrementPoints()
+    {
+        if (requestedPackageType == "No rush")
+        {
+            player.points -= 10;
+        } else if (requestedPackageType == "Standard")
+        {
+            player.points -= 15;
+        }
+        player.UpdatePointsUI();
+        requestedPackageType = null;
     }
 }
    

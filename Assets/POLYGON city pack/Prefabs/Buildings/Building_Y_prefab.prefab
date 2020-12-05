@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33461528917003132}
   - component: {fileID: 23047172430320814}
   - component: {fileID: 64127662513382416}
+  - component: {fileID: 1574957585}
   m_Layer: 0
   m_Name: Building_Y
   m_TagString: Untagged
@@ -105,6 +106,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: c6b61d30c859df643ba75813f0894e38, type: 3}
+--- !u!114 &1574957585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1290088440890928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestedPackageType: 
+  player: {fileID: 0}
+  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
+  timerPosition: {fileID: 4884152857282597825}
 --- !u!1 &1878098898913144
 GameObject:
   m_ObjectHideFlags: 0

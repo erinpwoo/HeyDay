@@ -186,7 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requestedPackageType: 
-  timer: 0
   player: {fileID: 0}
   timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
   timerPosition: {fileID: 590824801}

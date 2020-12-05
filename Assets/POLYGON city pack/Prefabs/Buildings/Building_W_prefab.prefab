@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 33273517277476470}
   - component: {fileID: 23988396105568504}
   - component: {fileID: 64384076755112708}
+  - component: {fileID: 1248953813}
   m_Layer: 0
   m_Name: Building_W
   m_TagString: Untagged
@@ -138,6 +139,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: ee171171cf1e6bc46a3aa94123b229cc, type: 3}
+--- !u!114 &1248953813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1769148396902374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestedPackageType: 
+  player: {fileID: 0}
+  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
+  timerPosition: {fileID: 1400033541699901057}
 --- !u!1 &3732743192046378898
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +178,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3732743192046378898}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.5, y: 10.013995, z: -0.7}
   m_LocalScale: {x: 0.6666664, y: 0.6666667, z: 0.6666664}
   m_Children: []

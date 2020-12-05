@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 33040888496955972}
   - component: {fileID: 23946588300658334}
   - component: {fileID: 64760342044122792}
+  - component: {fileID: 148358464}
   m_Layer: 0
   m_Name: Build_G-Right
   m_TagString: Untagged
@@ -139,6 +140,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: bb1edca309ad0a442b0a690fc4e4a944, type: 3}
+--- !u!114 &148358464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1701896581052030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestedPackageType: 
+  player: {fileID: 0}
+  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
+  timerPosition: {fileID: 0}
 --- !u!1 &1529060690452878213
 GameObject:
   m_ObjectHideFlags: 0

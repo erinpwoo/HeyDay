@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33418271920073916}
   - component: {fileID: 23524285103523870}
   - component: {fileID: 64962537987607460}
+  - component: {fileID: 563121304}
   m_Layer: 0
   m_Name: Gas_station_A
   m_TagString: Untagged
@@ -112,6 +113,22 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 5bb97b332176ae0499af0f666e4f5828, type: 3}
+--- !u!114 &563121304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1222731060140294}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestedPackageType: 
+  player: {fileID: 0}
+  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
+  timerPosition: {fileID: 3048611437787631539}
 --- !u!1 &1505934643987248
 GameObject:
   m_ObjectHideFlags: 0
