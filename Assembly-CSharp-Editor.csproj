@@ -56,9 +56,7 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Cardboard realistic boxes [HQ,Free]/SCG_Showcase_Modules/Standard Assets/Effects/CinematicEffects(BETA)/TonemappingColorGrading/Editor/TonemappingColorGradingEditor.cs" />
-    <Compile Include="Assets/Cardboard realistic boxes [HQ,Free]/SCG_Showcase_Modules/Standard Assets/Effects/CinematicEffects(BETA)/DepthOfField/Editor/DepthOfFieldEditor.cs" />
-    <Compile Include="Assets/Cardboard realistic boxes [HQ,Free]/SCG_Showcase_Modules/Standard Assets/Effects/CinematicEffects(BETA)/ScreenSpaceReflection/Editor/ScreenSpaceReflectionEditor.cs" />
+    <Compile Include="Assets/LeanTween/Editor/LeanTweenDocumentationEditor.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/EasyRoads3D/Editor/EasyRoads3Dv3Editor.dll" />
@@ -264,14 +262,14 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="EasyRoads3Dv3 2">
+      <HintPath>Assets/EasyRoads3D/lib/EasyRoads3Dv3 2.dll</HintPath>
+    </Reference>
     <Reference Include="EasyRoads3Dv3">
       <HintPath>Assets/EasyRoads3D/lib/EasyRoads3Dv3.dll</HintPath>
     </Reference>
     <Reference Include="EasyRoads3Dv3Editor">
       <HintPath>Assets/EasyRoads3D/Editor/EasyRoads3Dv3Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="EasyRoads3Dv3 2">
-      <HintPath>Assets/EasyRoads3D/lib/EasyRoads3Dv3 2.dll</HintPath>
     </Reference>
     <Reference Include="EasyRoads3Dv3Editor 2">
       <HintPath>Assets/EasyRoads3D/Editor/EasyRoads3Dv3Editor 2.dll</HintPath>

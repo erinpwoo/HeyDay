@@ -7,10 +7,14 @@ public class Building : MonoBehaviour
 {
     public string requestedPackageType;
     public Player player;
+    public GameObject timerPrefab;
+    public Transform timerPosition;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        timerPosition = transform.Find("Timer position");
+        SpawnOrder("No rush");
 
     }
 
@@ -36,9 +40,18 @@ public class Building : MonoBehaviour
         }
     }
 
-    public void SpawnOrder()
+    public void SpawnOrder(string packageType)
     {
-
+        GameObject timer = Instantiate(timerPrefab, timerPosition);
+        if (packageType == "No rush")
+        {
+            timer.GetComponent<Bar>().time = 60;
+        } else if (packageType == "Standard")
+        {
+            timer.GetComponent<Bar>().time = 50;
+        }
+        requestedPackageType = packageType;
+        timer.GetComponent<Bar>().AnimateBar();
     }
 }
    
