@@ -38,6 +38,7 @@ public class Building : MonoBehaviour
                 timer.GetComponent<Bar>().CancelBarTimer();
                 Destroy(timer);
                 isTimerRunning = false;
+                requestedPackageType = null;
             }
         }
         else if (collision.gameObject.CompareTag("Standard"))
