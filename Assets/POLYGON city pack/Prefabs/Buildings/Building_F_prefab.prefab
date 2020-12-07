@@ -42,9 +42,10 @@ GameObject:
   - component: {fileID: 33101124570281308}
   - component: {fileID: 23522841269547008}
   - component: {fileID: 64867657449179952}
+  - component: {fileID: 1712266544}
   m_Layer: 0
   m_Name: Building_F
-  m_TagString: Untagged
+  m_TagString: Buildings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -140,6 +141,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 1eff86bacbfcee04fae528f76228c44d, type: 3}
+--- !u!114 &1712266544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1650278645903672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestedPackageType: 
+  player: {fileID: 0}
+  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
+  timerPosition: {fileID: 590824801}
+  timer: {fileID: 0}
+  isTimerRunning: 0
+  lightsOnMaterial: {fileID: 2100000, guid: 763d547f29cebc443a26da20545010dd, type: 2}
+  lightsOffMaterial: {fileID: 2100000, guid: 26df91506bf83b343b8083c5322323ae, type: 2}
+  windowIndices: 
 --- !u!1 &1772776456942506
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +171,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4619626185693152}
-  - component: {fileID: 23261388}
   m_Layer: 0
   m_Name: Building_F_prefab
   m_TagString: Untagged
@@ -173,19 +194,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &23261388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1772776456942506}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  requestedPackageType: 
-  player: {fileID: 0}
-  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
-  timerPosition: {fileID: 590824801}

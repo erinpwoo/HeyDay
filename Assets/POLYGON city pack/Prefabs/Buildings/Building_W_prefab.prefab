@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 1248953813}
   m_Layer: 0
   m_Name: Building_W
-  m_TagString: Untagged
+  m_TagString: Buildings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,6 +155,11 @@ MonoBehaviour:
   player: {fileID: 0}
   timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
   timerPosition: {fileID: 1400033541699901057}
+  timer: {fileID: 0}
+  isTimerRunning: 0
+  lightsOnMaterial: {fileID: 2100000, guid: 763d547f29cebc443a26da20545010dd, type: 2}
+  lightsOffMaterial: {fileID: 2100000, guid: 26df91506bf83b343b8083c5322323ae, type: 2}
+  windowIndices: 
 --- !u!1 &3732743192046378898
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,10 +183,10 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3732743192046378898}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 2.5, y: 10.013995, z: -0.7}
   m_LocalScale: {x: 0.6666664, y: 0.6666667, z: 0.6666664}
   m_Children: []
   m_Father: {fileID: 4725887406615136}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}

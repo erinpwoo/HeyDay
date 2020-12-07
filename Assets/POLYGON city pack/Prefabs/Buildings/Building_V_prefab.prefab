@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 733740298}
   m_Layer: 0
   m_Name: Building_V
-  m_TagString: Untagged
+  m_TagString: Buildings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,6 +120,11 @@ MonoBehaviour:
   player: {fileID: 0}
   timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
   timerPosition: {fileID: 6640848099688448274}
+  timer: {fileID: 0}
+  isTimerRunning: 0
+  lightsOnMaterial: {fileID: 2100000, guid: 763d547f29cebc443a26da20545010dd, type: 2}
+  lightsOffMaterial: {fileID: 2100000, guid: 26df91506bf83b343b8083c5322323ae, type: 2}
+  windowIndices: 
 --- !u!1 &1956396886676158
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +181,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665517680034814720}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: 8.3, y: 10.014, z: 3.6}
+  m_LocalPosition: {x: 1.2, y: 10.014, z: 3.6}
   m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
   m_Children: []
   m_Father: {fileID: 4306805740919098}

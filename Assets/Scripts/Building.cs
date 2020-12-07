@@ -11,12 +11,22 @@ public class Building : MonoBehaviour
     public Transform timerPosition;
     public GameObject timer;
     public bool isTimerRunning;
+    public Material lightsOnMaterial;
+    public Material lightsOffMaterial;
+    public List<int> windowIndices;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         timerPosition = transform.parent.Find("Timer position");
         isTimerRunning = false;
+        for (int i = 0; i < GetComponent<MeshRenderer>().materials.Length; i++)
+        {
+            if (GetComponent<MeshRenderer>().materials[i].name == (lightsOffMaterial.name + " (Instance)"))
+            {
+                windowIndices.Add(i);
+            }
+        }
     }
 
     private void Update()
@@ -39,6 +49,7 @@ public class Building : MonoBehaviour
                 Destroy(timer);
                 isTimerRunning = false;
                 requestedPackageType = null;
+                TurnLightsOff();
             }
         }
         else if (collision.gameObject.CompareTag("Standard"))
@@ -50,6 +61,7 @@ public class Building : MonoBehaviour
                 Destroy(timer);
                 isTimerRunning = false;
                 requestedPackageType = null;
+                TurnLightsOff();
             }
         }
         player.UpdatePointsUI();
@@ -68,6 +80,7 @@ public class Building : MonoBehaviour
         }
         requestedPackageType = packageType;
         timer.GetComponent<Bar>().AnimateBar(timer, this);
+        TurnLightsOn();
     }
 
     public void DecrementPoints()
@@ -81,6 +94,26 @@ public class Building : MonoBehaviour
         }
         player.UpdatePointsUI();
         requestedPackageType = null;
+    }
+
+    public void TurnLightsOn()
+    {
+        Material[] materials = GetComponent<MeshRenderer>().materials;
+        foreach (int index in windowIndices)
+        {
+            materials[index] = lightsOnMaterial;
+        }
+        GetComponent<MeshRenderer>().materials = materials;
+    }
+
+    public void TurnLightsOff()
+    {
+        Material[] materials = GetComponent<MeshRenderer>().materials;
+        foreach (int index in windowIndices)
+        {
+            materials[index] = lightsOffMaterial;
+        }
+        GetComponent<MeshRenderer>().materials = materials;
     }
 }
    

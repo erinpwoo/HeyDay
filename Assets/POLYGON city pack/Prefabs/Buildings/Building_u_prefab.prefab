@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 33224131436033912}
   - component: {fileID: 23572936599760342}
   - component: {fileID: 64412854790375274}
+  - component: {fileID: 233096396}
   m_Layer: 0
   m_Name: Building_u
-  m_TagString: Untagged
+  m_TagString: Buildings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,6 +108,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 35ce32ffea177fb4db15a088cc468505, type: 3}
+--- !u!114 &233096396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338914458493622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestedPackageType: 
+  player: {fileID: 0}
+  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
+  timerPosition: {fileID: 7589876018916508935}
+  timer: {fileID: 0}
+  isTimerRunning: 0
+  lightsOnMaterial: {fileID: 2100000, guid: 763d547f29cebc443a26da20545010dd, type: 2}
+  lightsOffMaterial: {fileID: 2100000, guid: 26df91506bf83b343b8083c5322323ae, type: 2}
+  windowIndices: 
 --- !u!1 &1441186220738132
 GameObject:
   m_ObjectHideFlags: 0

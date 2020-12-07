@@ -8494,6 +8494,7 @@ MonoBehaviour:
   timerPosition: {fileID: 437323708}
   timer: {fileID: 0}
   isTimerRunning: 0
+  emissive: {fileID: 0}
 --- !u!1 &259901819
 GameObject:
   m_ObjectHideFlags: 0
@@ -11441,6 +11442,7 @@ MonoBehaviour:
   timerPosition: {fileID: 342874511}
   timer: {fileID: 0}
   isTimerRunning: 0
+  emissive: {fileID: 0}
 --- !u!1001 &307876489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13110,6 +13112,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1408904557}
     m_Modifications:
+    - target: {fileID: 425903557, guid: a6cd0c657da915144bd367d385c0fc31, type: 3}
+      propertyPath: emissive
+      value: 
+      objectReference: {fileID: 2100000, guid: 0b5ab4b8a0e43004ba5e294fbe6cf73a, type: 2}
     - target: {fileID: 1785044199738478, guid: a6cd0c657da915144bd367d385c0fc31, type: 3}
       propertyPath: m_Name
       value: Building_Z_Prefab
@@ -28863,6 +28869,7 @@ MonoBehaviour:
   timerPosition: {fileID: 930405817}
   timer: {fileID: 0}
   isTimerRunning: 0
+  emissive: {fileID: 0}
 --- !u!1 &1760740099
 GameObject:
   m_ObjectHideFlags: 0
@@ -34528,6 +34535,10 @@ PrefabInstance:
     - target: {fileID: 1729871563076604033, guid: 6a41b3b46f4914e0c8c82d49ce1dc8da, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5848603652194431055, guid: 6a41b3b46f4914e0c8c82d49ce1dc8da, type: 3}
+      propertyPath: m_SidewaysFriction.m_ExtremumValue
+      value: 10.54
       objectReference: {fileID: 0}
     - target: {fileID: 7618793797206677299, guid: 6a41b3b46f4914e0c8c82d49ce1dc8da, type: 3}
       propertyPath: m_LocalPosition.x

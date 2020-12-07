@@ -31,7 +31,7 @@ public class LevelController : MonoBehaviour
             Building newOrder = buildings[Random.Range(0, buildings.Count - 1)];
             if (!newOrder.isTimerRunning)
             {
-                newOrder.SpawnOrder(availPackageTypes[Random.Range(0, availPackageTypes.Length - 1)]);
+                newOrder.SpawnOrder(availPackageTypes[Random.Range(0, availPackageTypes.Length)]);
                 currCounter = duration;
             }
         }
