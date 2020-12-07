@@ -10,6 +10,7 @@ TagManager:
   - Buildings
   - No-rush
   - Standard
+  - Minimap Cam
   layers:
   - Default
   - TransparentFX

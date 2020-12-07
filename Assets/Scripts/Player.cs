@@ -8,11 +8,12 @@ public class Player : MonoBehaviour
 {
     public int points;
     public int currPackageIndex;
-    private GameObject currPackage;
+    public GameObject currPackage;
     public GameObject[] availablePackages;
     public GameObject spawnLocation;
     public Transform[] buildings;
     public Text pointsUI;
+    private bool hasStarted;
     
     // Start is called before the first frame update
     void Start()
@@ -20,41 +21,44 @@ public class Player : MonoBehaviour
         currPackageIndex = 0;
         spawnLocation = GameObject.FindGameObjectWithTag("Package spawn");
         currPackage = availablePackages[currPackageIndex];
-        buildings = GameObject.FindGameObjectWithTag("Buildings").GetComponentsInChildren<Transform>();
         pointsUI = GameObject.FindGameObjectWithTag("Points UI").GetComponent<Text>();
+        hasStarted = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-       if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (hasStarted)
         {
-            if (currPackageIndex == 0)
+            if (Input.GetMouseButtonDown(1))
             {
-                currPackageIndex = availablePackages.Length - 1;
-            } else
-            {
-                currPackageIndex--;
+                SwitchPackage();
             }
-            currPackage = Instantiate(availablePackages[currPackageIndex], spawnLocation.transform.position, spawnLocation.transform.rotation);
-            
-        } else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            if (currPackageIndex == availablePackages.Length - 1)
-            {
-                currPackageIndex = 0;
-            }
-            else
-            {
-                currPackageIndex++;
-            }
-            currPackage = Instantiate(availablePackages[currPackageIndex], spawnLocation.transform.position, spawnLocation.transform.rotation);
         }
     }
 
     public void UpdatePointsUI()
     {
         pointsUI.text = "Points: " + points;
+    }
+
+    public void SwitchPackage()
+    {
+        if (currPackageIndex == availablePackages.Length - 1)
+        {
+            currPackageIndex = 0;
+        }
+        else
+        {
+            currPackageIndex++;
+        }
+        if (currPackage != null)
+        {
+            Destroy(currPackage);
+        }
+
+        currPackage = Instantiate(availablePackages[currPackageIndex], spawnLocation.transform.position, spawnLocation.transform.rotation);
+ 
     }
 
 }

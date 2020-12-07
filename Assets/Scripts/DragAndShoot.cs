@@ -8,16 +8,15 @@ public class DragAndShoot : MonoBehaviour
     private Vector3 mouseReleasePos;
     public GameObject launchPos;
     private Rigidbody rb;
-
+    public Player player;
     private bool isShoot;
-    private bool isMouseDown;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         isShoot = false;
         launchPos = GameObject.FindGameObjectWithTag("Package spawn");
-        isMouseDown = false;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     private void Update()
@@ -33,14 +32,17 @@ public class DragAndShoot : MonoBehaviour
     private void OnMouseDown()
     {
         mousePressDownPos = Input.mousePosition;
-        isMouseDown = true;
     }
 
     private void OnMouseUp()
     {
         mouseReleasePos = Input.mousePosition;
-        isMouseDown = false;
         Shoot(mouseReleasePos - mousePressDownPos);
+        if (player.currPackage == gameObject)
+        {
+            player.currPackage = null;
+        }
+        
     }
 
     private float forceMultiplier = 10;
