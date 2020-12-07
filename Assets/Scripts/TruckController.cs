@@ -15,6 +15,12 @@ public class TruckController : MonoBehaviour
     public float maxSteerAngle = 30; // in degrees
     public float motorForce = 1000;
 
+    public Player player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+    }
 
     public void GetInput()
     {
@@ -64,9 +70,12 @@ public class TruckController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        GetInput();
-        Steer();
-        Accelerate();
-        UpdateWheelPoses();
+        if (player.hasStarted)
+        {
+            GetInput();
+            Steer();
+            Accelerate();
+            UpdateWheelPoses();
+        }
     }
 }

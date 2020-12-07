@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     public GameObject spawnLocation;
     public Transform[] buildings;
     public Text pointsUI;
-    private bool hasStarted;
+    public bool hasStarted;
     
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class Player : MonoBehaviour
         spawnLocation = GameObject.FindGameObjectWithTag("Package spawn");
         currPackage = availablePackages[currPackageIndex];
         pointsUI = GameObject.FindGameObjectWithTag("Points UI").GetComponent<Text>();
-        hasStarted = true;
+        hasStarted = false;
     }
 
     // Update is called once per frame

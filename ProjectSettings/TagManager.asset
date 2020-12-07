@@ -11,6 +11,8 @@ TagManager:
   - No-rush
   - Standard
   - Minimap Cam
+  - Minimap window
+  - Start button
   layers:
   - Default
   - TransparentFX
