@@ -14,6 +14,9 @@ public class Building : MonoBehaviour
     public Material lightsOnMaterial;
     public Material lightsOffMaterial;
     public List<int> windowIndices;
+    public AudioSource doorbell;
+    public GameObject arrowPrefab;
+    private GameObject arrow;
 
     private void Start()
     {
@@ -27,6 +30,7 @@ public class Building : MonoBehaviour
                 windowIndices.Add(i);
             }
         }
+        doorbell = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -49,7 +53,8 @@ public class Building : MonoBehaviour
                 Destroy(timer);
                 isTimerRunning = false;
                 requestedPackageType = null;
-                TurnLightsOff();
+                PlayDoorbell();
+                Destroy(arrow);
             }
         }
         else if (collision.gameObject.CompareTag("Standard"))
@@ -61,7 +66,8 @@ public class Building : MonoBehaviour
                 Destroy(timer);
                 isTimerRunning = false;
                 requestedPackageType = null;
-                TurnLightsOff();
+                PlayDoorbell();
+                Destroy(arrow);
             }
         }
         player.UpdatePointsUI();
@@ -80,7 +86,7 @@ public class Building : MonoBehaviour
         }
         requestedPackageType = packageType;
         timer.GetComponent<Bar>().AnimateBar(timer, this);
-        TurnLightsOn();
+        arrow = Instantiate(arrowPrefab, timerPosition.position, arrowPrefab.transform.rotation);
     }
 
     public void DecrementPoints()
@@ -96,24 +102,9 @@ public class Building : MonoBehaviour
         requestedPackageType = null;
     }
 
-    public void TurnLightsOn()
+    public void PlayDoorbell()
     {
-        Material[] materials = GetComponent<MeshRenderer>().materials;
-        foreach (int index in windowIndices)
-        {
-            materials[index] = lightsOnMaterial;
-        }
-        GetComponent<MeshRenderer>().materials = materials;
-    }
-
-    public void TurnLightsOff()
-    {
-        Material[] materials = GetComponent<MeshRenderer>().materials;
-        foreach (int index in windowIndices)
-        {
-            materials[index] = lightsOffMaterial;
-        }
-        GetComponent<MeshRenderer>().materials = materials;
+        doorbell.Play();
     }
 }
    

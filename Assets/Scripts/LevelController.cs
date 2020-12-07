@@ -12,6 +12,11 @@ public class LevelController : MonoBehaviour
     public GameObject minimapWindow;
     public Player player;
     public GameObject startButton;
+    public GameObject timer;
+    public GameObject failLevelText;
+    private float startTime;
+    public bool isGameRunning;
+    public int pointThreshold;
     
     // Start is called before the first frame update
     void Start()
@@ -29,12 +34,17 @@ public class LevelController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         minimapWindow.SetActive(false);
         startButton.SetActive(true);
+        timer = GameObject.FindGameObjectWithTag("Level timer");
+        startTime = Time.time;
+        failLevelText = GameObject.FindGameObjectWithTag("Fail level");
+        failLevelText.SetActive(false);
+        isGameRunning = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.hasStarted)
+        if (player.hasStarted && isGameRunning)
         {
             currCounter -= Time.deltaTime;
             if (currCounter <= 0)
@@ -47,14 +57,63 @@ public class LevelController : MonoBehaviour
                     currCounter = duration;
                 }
             }
+
+            float timeLeft = 120 - (Time.time - startTime);
+            float minutes = Mathf.Floor(timeLeft / 60);
+            float seconds = Mathf.RoundToInt(timeLeft % 60);
+            if (seconds < 10)
+            {
+                timer.GetComponent<Text>().text = "Time left: " + minutes + ":0" + Mathf.RoundToInt(seconds);
+            } else
+            {
+                timer.GetComponent<Text>().text = "Time left: " + minutes + ":" + Mathf.RoundToInt(seconds);
+            }
+            
+            if (timeLeft <= 0)
+            {
+                timer.GetComponent<Text>().text = "Time left: 0:00";
+                if (player.points >= pointThreshold)
+                {
+                    PassedToNextLevel();
+                } else
+                {
+                    GameOver();
+                }
+            }
         }
-        
     }
 
     public void StartGame()
     {
-        minimapWindow.SetActive(true);
-        player.hasStarted = true;
-        startButton.SetActive(false);
+        if (!isGameRunning)
+        {
+            minimapWindow.SetActive(true);
+            player.hasStarted = true;
+            isGameRunning = true;
+            startButton.SetActive(false);
+        }
+        
+    }
+
+    public void GameOver()
+    {
+        isGameRunning = false;
+        player.hasStarted = false;
+        minimapWindow.SetActive(false);
+        for (int i = 0; i < buildings.Count; i++)
+        {
+            if (buildings[i].isTimerRunning)
+            {
+                buildings[i].timer.GetComponent<Bar>().CancelBarTimer();
+            }
+            
+        }
+        failLevelText.SetActive(true);
+        startButton.SetActive(true);
+    }
+
+    public void PassedToNextLevel ()
+    {
+
     }
 }

@@ -13,6 +13,9 @@ TagManager:
   - Minimap Cam
   - Minimap window
   - Start button
+  - Level timer
+  - Fail level
+  - LevelController
   layers:
   - Default
   - TransparentFX

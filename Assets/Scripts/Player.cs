@@ -14,6 +14,7 @@ public class Player : MonoBehaviour
     public Transform[] buildings;
     public Text pointsUI;
     public bool hasStarted;
+    public GameObject minimapCam;
     
     // Start is called before the first frame update
     void Start()
@@ -35,6 +36,7 @@ public class Player : MonoBehaviour
                 SwitchPackage();
             }
         }
+        minimapCam.transform.rotation = Quaternion.Euler(minimapCam.transform.eulerAngles.x, gameObject.transform.eulerAngles.y, minimapCam.transform.eulerAngles.z);
     }
 
     public void UpdatePointsUI()

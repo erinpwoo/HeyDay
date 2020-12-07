@@ -17,9 +17,12 @@ public class TruckController : MonoBehaviour
 
     public Player player;
 
+    public LevelController levelController;
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        levelController = GameObject.FindGameObjectWithTag("LevelController").GetComponent<LevelController>();
     }
 
     public void GetInput()
@@ -66,6 +69,10 @@ public class TruckController : MonoBehaviour
 
         _transform.position = _pos;
         _transform.rotation = _quat;
+        if (transform.up.y <= 0)
+        {
+            levelController.GameOver();
+        }
     }
 
     private void FixedUpdate()
