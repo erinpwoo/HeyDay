@@ -49,6 +49,7 @@ public class Building : MonoBehaviour
                 timer.GetComponent<Bar>().CancelBarTimer();
                 Destroy(timer);
                 isTimerRunning = false;
+                requestedPackageType = null;
             }
         }
         player.UpdatePointsUI();
