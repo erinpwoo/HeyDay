@@ -17,6 +17,7 @@ public class LevelController : MonoBehaviour
     private float startTime;
     public bool isGameRunning;
     public int pointThreshold;
+    public Vector3 playerStartPosition;
     
     // Start is called before the first frame update
     void Start()
@@ -87,10 +88,15 @@ public class LevelController : MonoBehaviour
     {
         if (!isGameRunning)
         {
+            player.transform.position = playerStartPosition;
+            player.transform.rotation = new Quaternion(0, 0, 0, 1);
             minimapWindow.SetActive(true);
             player.hasStarted = true;
             isGameRunning = true;
+            failLevelText.SetActive(false);
             startButton.SetActive(false);
+            startTime = Time.time;
+            player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
         
     }
@@ -105,9 +111,12 @@ public class LevelController : MonoBehaviour
             if (buildings[i].isTimerRunning)
             {
                 buildings[i].timer.GetComponent<Bar>().CancelBarTimer();
+                buildings[i].isTimerRunning = false;
+                buildings[i].requestedPackageType = null;
             }
             
         }
+        player.points = 0;
         failLevelText.SetActive(true);
         startButton.SetActive(true);
     }

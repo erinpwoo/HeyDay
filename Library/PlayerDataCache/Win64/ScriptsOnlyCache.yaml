@@ -1,10 +1,25 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - Bar
+    - Building
     - DragAndShoot
-    - Package
+    - LevelController
     - Player
     - TruckController
+    - TurnTheGameOn.ArrowWaypointer.Waypoint
+    - TurnTheGameOn.ArrowWaypointer.WaypointController
+    EasyRoads3Dv3.dll:
+    - ERSurfaceScript
+    - EasyRoads3Dv3.ERConnectionParent
+    - EasyRoads3Dv3.ERCrossingPrefabs
+    - EasyRoads3Dv3.ERIConnector
+    - EasyRoads3Dv3.ERMarkerExt
+    - EasyRoads3Dv3.ERModularBase
+    - EasyRoads3Dv3.ERModularRoad
+    - EasyRoads3Dv3.ERRoadNetworkObject
+    - EasyRoads3Dv3.ERSideObjectLog
+    - EasyRoads3Dv3.ERTerrain
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     UnityEditor.TestRunner.dll:
@@ -18,6 +33,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/Main Scene.unity:
@@ -39,15 +55,21 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 54
+    - Class: 49
       Script: {instanceID: 0}
-    - Class: 59
+    - Class: 54
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 84
       Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
@@ -56,27 +78,57 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11854}
+      Script: {instanceID: 11860}
     - Class: 114
-      Script: {instanceID: 12030}
+      Script: {instanceID: 11862}
     - Class: 114
-      Script: {instanceID: 12070}
+      Script: {instanceID: 11866}
     - Class: 114
-      Script: {instanceID: 12384}
+      Script: {instanceID: 12066}
     - Class: 114
-      Script: {instanceID: 12510}
+      Script: {instanceID: 12106}
     - Class: 114
-      Script: {instanceID: 12968}
+      Script: {instanceID: 12154}
     - Class: 114
-      Script: {instanceID: 13272}
+      Script: {instanceID: 12158}
     - Class: 114
-      Script: {instanceID: 13506}
+      Script: {instanceID: 12164}
     - Class: 114
-      Script: {instanceID: 13890}
+      Script: {instanceID: 12168}
     - Class: 114
-      Script: {instanceID: 21800}
+      Script: {instanceID: 12174}
     - Class: 114
-      Script: {instanceID: 21812}
+      Script: {instanceID: 12180}
+    - Class: 114
+      Script: {instanceID: 12198}
+    - Class: 114
+      Script: {instanceID: 12200}
+    - Class: 114
+      Script: {instanceID: 12534}
+    - Class: 114
+      Script: {instanceID: 12778}
+    - Class: 114
+      Script: {instanceID: 13086}
+    - Class: 114
+      Script: {instanceID: 13138}
+    - Class: 114
+      Script: {instanceID: 13474}
+    - Class: 114
+      Script: {instanceID: 13502}
+    - Class: 114
+      Script: {instanceID: 13594}
+    - Class: 114
+      Script: {instanceID: 13782}
+    - Class: 114
+      Script: {instanceID: 14006}
+    - Class: 114
+      Script: {instanceID: 14018}
+    - Class: 114
+      Script: {instanceID: 14406}
+    - Class: 114
+      Script: {instanceID: 101402}
+    - Class: 114
+      Script: {instanceID: 101404}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -91,6 +143,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 196
       Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
     - Class: 218
@@ -103,13 +157,27 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 850595691
       Script: {instanceID: 0}
+    - Class: 1953259897
+      Script: {instanceID: 0}
   scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 135fb48035d8341b4ca1b61eb55ed95e
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERSideObjectLog
   - hash:
       serializedVersion: 2
       Hash: 4bc4346a71a8df53a6b106f68ef3a190
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: a572222344ef0a57e622041917480366
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERModularBase
   - hash:
       serializedVersion: 2
       Hash: f40fedccd4adbc76605bea6d67537e4b
@@ -196,6 +264,342 @@ ScriptsOnlyBuild:
     className: TMP_InputField
   - hash:
       serializedVersion: 2
+      Hash: e37feead6115db66dd30b83371233dcb
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: EasyRoads3DTerrainIDv3
+  - hash:
+      serializedVersion: 2
+      Hash: 0f9e7a651534af5224515ec530b090f1
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERBend
+  - hash:
+      serializedVersion: 2
+      Hash: 90371cfb1639d6cc5b4bd6ba71c159e5
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERCamNodes
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERConnectionParent
+  - hash:
+      serializedVersion: 2
+      Hash: 02cfe8d9b6a13cafd19f88c721ef8627
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERCrossingMainRoad
+  - hash:
+      serializedVersion: 2
+      Hash: b16493fb4fe6ece7d7faaea2ce368d9d
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERCrossingPrefabs
+  - hash:
+      serializedVersion: 2
+      Hash: a210e1a181ac0b5b68524bfdb46d9532
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERCrossings
+  - hash:
+      serializedVersion: 2
+      Hash: 2ba9b1f640e1abf5e968896ad9a34256
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERDecal
+  - hash:
+      serializedVersion: 2
+      Hash: cc36bbf51be95c099ef14f09b74e53a0
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERIConnector
+  - hash:
+      serializedVersion: 2
+      Hash: cd67c9a2c65c376380bd39bce295f438
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERLocalGrid
+  - hash:
+      serializedVersion: 2
+      Hash: 41329583f78e1783f94bca7d571e497e
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERMarkerExt
+  - hash:
+      serializedVersion: 2
+      Hash: c4be92dae3922e884c963788b9b56712
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERMaterial
+  - hash:
+      serializedVersion: 2
+      Hash: c5294bf7bb61d9a23200935d70dc27b4
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERMeshUtility
+  - hash:
+      serializedVersion: 2
+      Hash: eba66c01978bf4c90d1e81a43f0a9fd8
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERModularRoad
+  - hash:
+      serializedVersion: 2
+      Hash: f414f6be4440a31399882c745fa77c9d
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERPrefab
+  - hash:
+      serializedVersion: 2
+      Hash: 05e9fa6ac9a9a2d60a43094abddd849c
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERPrefabInstance
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERRoadNetworkObject
+  - hash:
+      serializedVersion: 2
+      Hash: 731556e560c32795c9a73c0c1dfc43c5
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERRoundabouts
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERRoundaboutsFunctions
+  - hash:
+      serializedVersion: 2
+      Hash: 0053c50cf750e4665a935935b38c6897
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERSideObjectInstance
+  - hash:
+      serializedVersion: 2
+      Hash: ec9cc9c41152a943f042efe7ac7ac100
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERSideObjectSection
+  - hash:
+      serializedVersion: 2
+      Hash: 6871fd020d2feef1028bdc285188b3e9
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERSideWalkInstanceScript
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERSideWalkVecs
+  - hash:
+      serializedVersion: 2
+      Hash: e57e9ff196e7460c401ef635c1efa9cd
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERSOMarkerExt
+  - hash:
+      serializedVersion: 2
+      Hash: 0523ab9e0f4e3e82b76e471bd422500a
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERSORoadExt
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: 
+    className: ERSurfaceScript
+  - hash:
+      serializedVersion: 2
+      Hash: e0bc9039b6714c02e759d93d67c53894
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERTerrain
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ERTSidewalkTriangulation
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OCCCDOQDOC
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OCCDCDQQOQ
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OCCDDDCCDC
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OCCDOQQOOO
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OCCQDCDOOD
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OCDDCOCOOO
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OCDOOOQQDD
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OCODDQQCCO
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OCQOOCQCQO
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ODCOQCQCOQ
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ODDCDDCDQD
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ODODCQDCQO
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ODOOCDQCOO
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ODOODOQOCC
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: ODQCCOODOC
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OODDQCCCDQ
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OODDQCDCDQ
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OOOOQCQCCC
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OOQCOQCOCC
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OQDCCQOOOC
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OQDCCQOOOCExt
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OQDQODQQCC
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OQQCODQQOC
+  - hash:
+      serializedVersion: 2
+      Hash: 827c8b39402deea0d8d477b52ad210e2
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: OQQOQOCDOC
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: QDDDQODDQDQDQDD
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: QDQDOOQQOOQDD
+  - hash:
+      serializedVersion: 2
+      Hash: da4a570e07b870c28b1463985606c82d
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: SelectedObject
+  - hash:
+      serializedVersion: 2
+      Hash: 137ee033ddebb1ca08a6e57cd7682e29
+    assemblyName: EasyRoads3Dv3.dll
+    namespaceName: EasyRoads3Dv3
+    className: SideObject
+  - hash:
+      serializedVersion: 2
       Hash: 7ab0e790220bdca831fdd886b339039d
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -256,7 +660,7 @@ ScriptsOnlyBuild:
     className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: 9d2ffc1939c23cdf788f570b9a4775bc
+      Hash: b167beb005ba74b967153ccb702c4242
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TruckController
@@ -304,16 +708,34 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 2ce3f2aac078e0bd69cfff393e4757b9
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LevelController
+  - hash:
+      serializedVersion: 2
       Hash: 040dd48e3a027d5424519a5fa2009df4
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
   - hash:
       serializedVersion: 2
+      Hash: 561f42e1e01a1a304a00c7923254a04a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Player
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LeanTween
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -350,6 +772,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 7bb60892504f782e6186729586efba56
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Building
   - hash:
       serializedVersion: 2
       Hash: f7bb6096199e0cf058d5d69878184cf4
@@ -394,7 +822,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 7216517530f606744fc28e578dbb4602
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DragAndShoot
@@ -422,6 +850,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: f16faf9df5cee96cab98ab8db30c3f7c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Bar
   - hash:
       serializedVersion: 2
       Hash: ae83e830e7a90c0aff918c4c2e520825
@@ -544,17 +978,17 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 6ca29918de5724dd3a81265988312ff9
+      Hash: b18f1f5690ed802d58cd7ead5c7fae0a
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Package
+    namespaceName: TurnTheGameOn.ArrowWaypointer
+    className: Waypoint
   - hash:
       serializedVersion: 2
-      Hash: 2cbc570fcbf0bf19e774787331b676ae
+      Hash: 344d921358ceecd800f2a728034ade3e
     assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Player
+    namespaceName: TurnTheGameOn.ArrowWaypointer
+    className: WaypointController
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main Scene.unity
-  playerPath: /Users/erinpwoo/Desktop/School/ECE194M/HeyDay! Prototype/HeyDay!.exe
+  playerPath: /Users/erinpwoo/Desktop/School/ECE194M/HeyDay! - Alpha/HeyDay!.exe
