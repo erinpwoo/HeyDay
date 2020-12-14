@@ -11,8 +11,6 @@ public class Building : MonoBehaviour
     public Transform timerPosition;
     public GameObject timer;
     public bool isTimerRunning;
-    public Material lightsOnMaterial;
-    public Material lightsOffMaterial;
     public List<int> windowIndices;
     public AudioSource doorbell;
     public GameObject arrowPrefab;
@@ -23,14 +21,6 @@ public class Building : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         timerPosition = transform.parent.Find("Timer position");
         isTimerRunning = false;
-        for (int i = 0; i < GetComponent<MeshRenderer>().materials.Length; i++)
-        {
-            if (GetComponent<MeshRenderer>().materials[i].name == (lightsOffMaterial.name + " (Instance)"))
-            {
-                windowIndices.Add(i);
-            }
-        }
-        doorbell = GetComponent<AudioSource>();
     }
 
     private void Update()
