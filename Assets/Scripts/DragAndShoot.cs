@@ -51,7 +51,8 @@ public class DragAndShoot : MonoBehaviour
         if (isShoot)
             return;
         isShoot = true;
-        rb.velocity = (mouseReleasePos-mousePressDownPos).magnitude * .1f * launchPos.transform.forward;
+        //rb.velocity = (mouseReleasePos-mousePressDownPos).magnitude * .1f * Vector3.forward;
+        rb.AddRelativeForce(new Vector3(Force.x, Force.y/2, Force.y) * forceMultiplier);
     }
 
 }
