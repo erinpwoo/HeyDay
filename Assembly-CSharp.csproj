@@ -56,11 +56,13 @@
     <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/TurnTheGameOn/Arrow WayPointer/Scripts/Waypoint.cs" />
     <Compile Include="Assets/Scripts/TruckController.cs" />
     <Compile Include="Assets/LeanTween/Framework/LTSeq.cs" />
     <Compile Include="Assets/LeanTween/Framework/LeanSmooth.cs" />
     <Compile Include="Assets/LeanTween/Framework/LeanTest.cs" />
     <Compile Include="Assets/Scripts/LevelController.cs" />
+    <Compile Include="Assets/TurnTheGameOn/Arrow WayPointer/Scripts/WaypointController.cs" />
     <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/LeanTween/Framework/LeanTween.cs" />
     <Compile Include="Assets/LeanTween/Framework/LeanAudio.cs" />
@@ -71,34 +73,13 @@
     <Compile Include="Assets/LeanTween/Framework/LeanTweenExt.cs" />
     <Compile Include="Assets/LeanTween/Framework/LTDescrOptional.cs" />
     <Compile Include="Assets/LeanTween/Framework/LTDescr.cs" />
-    <Compile Include="Assets/TurnTheGameOn/Arrow WayPointer/Scripts/Waypoint.cs" />
-    <Compile Include="Assets/TurnTheGameOn/Arrow WayPointer/Scripts/WaypointController.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="Assets/EasyRoads3D/lib/EasyRoads3Dv3 2.dll" />
-     <None Include="Assets/EasyRoads3D/shaders/EasyRoads3D-Surface-Offset.shader" />
      <None Include="Assets/LeanTween/ReadMe.txt" />
-     <None Include="Assets/EasyRoads3D/Resources/custom prefabs/_custom prefabs.txt" />
-     <None Include="Assets/EasyRoads3D/prefab meshes/_custom prefabs 2.txt" />
-     <None Include="Assets/EasyRoads3D/prefab meshes/_custom prefabs.txt" />
-     <None Include="Assets/EasyRoads3D/Resources/dynamic prefabs/dynamic prefabs 2.txt" />
      <None Include="Assets/LeanTween/License.txt" />
-     <None Include="Assets/EasyRoads3D/lib/EasyRoads3Dv3.dll" />
-     <None Include="Assets/EasyRoads3D/_readme .txt" />
-     <None Include="Assets/EasyRoads3D/shaders/EasyRoads3D-Road-Edit-Mode.shader" />
-     <None Include="Assets/EasyRoads3D/Resources/custom prefabs/_custom prefabs 2.txt" />
-     <None Include="Assets/EasyRoads3D/_readme  2.txt" />
-     <None Include="Assets/EasyRoads3D/shaders/EasyRoads3D - Unity 5 StandardSpecular.shader" />
      <None Include="Assets/TurnTheGameOn/Arrow WayPointer/Read Me.txt" />
      <None Include="Assets/Single_detailed_truck/readme.txt" />
-     <None Include="Assets/EasyRoads3D/prefab sources/_custom prefabs 2.txt" />
-     <None Include="Assets/EasyRoads3D/shaders/EasyRoads3D - Unity 5 Standard.shader" />
-     <None Include="Assets/EasyRoads3D/Resources/dynamic prefabs/dynamic prefabs.txt" />
      <None Include="Assets/POLYGON city pack/Read_me.txt" />
-     <None Include="Assets/EasyRoads3D/shaders/EasyRoads3D - Unity Standard 2018.shader" />
-     <None Include="Assets/EasyRoads3D/prefab sources/_custom prefabs.txt" />
-     <None Include="Assets/EasyRoads3D/_Release Notes.txt" />
-     <None Include="Assets/EasyRoads3D/_Release Notes 2.txt" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -287,12 +268,6 @@
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
-    </Reference>
-    <Reference Include="EasyRoads3Dv3 2">
-      <HintPath>Assets/EasyRoads3D/lib/EasyRoads3Dv3 2.dll</HintPath>
-    </Reference>
-    <Reference Include="EasyRoads3Dv3">
-      <HintPath>Assets/EasyRoads3D/lib/EasyRoads3Dv3.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
