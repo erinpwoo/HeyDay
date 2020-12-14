@@ -11,7 +11,6 @@ public class Building : MonoBehaviour
     public Transform timerPosition;
     public GameObject timer;
     public bool isTimerRunning;
-    public List<int> windowIndices;
     public AudioSource doorbell;
     public GameObject arrowPrefab;
     private GameObject arrow;
@@ -21,6 +20,7 @@ public class Building : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         timerPosition = transform.parent.Find("Timer position");
         isTimerRunning = false;
+        doorbell = GetComponent<AudioSource>();
     }
 
     private void Update()

@@ -1,5 +1,5 @@
 /target:library
-/out:"Temp/Assembly-CSharp-Editor.dll"
+/out:"Temp/Assembly-CSharp.dll"
 /nowarn:0169
 /nowarn:0649
 /deterministic
@@ -8,20 +8,6 @@
 /nostdlib+
 /preferreduilang:en-US
 /langversion:latest
-/reference:"Library/ScriptAssemblies/Assembly-CSharp.dll"
-/reference:"Library/ScriptAssemblies/Unity.Rider.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.dll"
-/reference:"Library/ScriptAssemblies/Unity.Timeline.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.Timeline.dll"
-/reference:"Library/ScriptAssemblies/Unity.VSCode.Editor.dll"
-/reference:"Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll"
-/reference:"Library/ScriptAssemblies/UnityEditor.TestRunner.dll"
-/reference:"Library/ScriptAssemblies/UnityEditor.UI.dll"
-/reference:"Library/ScriptAssemblies/UnityEngine.TestRunner.dll"
-/reference:"Library/ScriptAssemblies/UnityEngine.UI.dll"
-/reference:"/Applications/Unity/Hub/Editor/2020.1.13f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll"
-/reference:"/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Managed/UnityEditor.Graphs.dll"
 /reference:"/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Managed/UnityEditor.dll"
 /reference:"/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll"
 /reference:"/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.ARModule.dll"
@@ -200,9 +186,15 @@
 /reference:"/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.Xml.dll"
 /reference:"/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/System.dll"
 /reference:"/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll"
-/reference:"/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll"
-/reference:"/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll"
-/reference:"/Users/erinpwoo/Desktop/School/ECE194M/HeyDay!/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll"
+/reference:"Library/ScriptAssemblies/Unity.Rider.Editor.dll"
+/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll"
+/reference:"Library/ScriptAssemblies/Unity.TextMeshPro.dll"
+/reference:"Library/ScriptAssemblies/Unity.Timeline.Editor.dll"
+/reference:"Library/ScriptAssemblies/Unity.Timeline.dll"
+/reference:"Library/ScriptAssemblies/Unity.VSCode.Editor.dll"
+/reference:"Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll"
+/reference:"Library/ScriptAssemblies/UnityEditor.UI.dll"
+/reference:"Library/ScriptAssemblies/UnityEngine.UI.dll"
 /define:CSHARP_7_3_OR_NEWER
 /define:CSHARP_7_OR_LATER
 /define:DEBUG
@@ -267,7 +259,7 @@
 /define:ENABLE_WWW
 /define:GFXDEVICE_WAITFOREVENT_MESSAGEPUMP
 /define:INCLUDE_DYNAMIC_GI
-/define:NET_4_6
+/define:NET_STANDARD_2_0
 /define:PLATFORM_ARCH_64
 /define:PLATFORM_STANDALONE
 /define:PLATFORM_STANDALONE_WIN
@@ -303,5 +295,20 @@
 /define:UNITY_STANDALONE
 /define:UNITY_STANDALONE_WIN
 /define:UNITY_TEAM_LICENSE
-"Assets/LeanTween/Editor/LeanTweenDocumentationEditor.cs"
-"Assets/TurnTheGameOn/Arrow WayPointer/Scripts/Editor/Editor_WaypointController.cs"
+"Assets/LeanTween/Framework/LTDescr.cs"
+"Assets/LeanTween/Framework/LTDescrOptional.cs"
+"Assets/LeanTween/Framework/LTSeq.cs"
+"Assets/LeanTween/Framework/LeanAudio.cs"
+"Assets/LeanTween/Framework/LeanSmooth.cs"
+"Assets/LeanTween/Framework/LeanTest.cs"
+"Assets/LeanTween/Framework/LeanTween.cs"
+"Assets/LeanTween/Framework/LeanTweenExt.cs"
+"Assets/Scripts/Bar.cs"
+"Assets/Scripts/Building.cs"
+"Assets/Scripts/CameraController.cs"
+"Assets/Scripts/DragAndShoot.cs"
+"Assets/Scripts/LevelController.cs"
+"Assets/Scripts/Player.cs"
+"Assets/Scripts/TruckController.cs"
+"Assets/TurnTheGameOn/Arrow WayPointer/Scripts/Waypoint.cs"
+"Assets/TurnTheGameOn/Arrow WayPointer/Scripts/WaypointController.cs"
