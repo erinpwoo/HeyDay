@@ -3445,10 +3445,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 277dacd42456244678a7f9b4dde9e53d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minimapWindow: {fileID: 755971739}
-  player: {fileID: 4444741979544495747}
+  minimapWindow: {fileID: 0}
+  player: {fileID: 0}
   minimapCam: {fileID: 373694415}
-  pauseMenu: {fileID: 0}
+  pauseMenu: {fileID: 748488401}
   isPaused: 0
 --- !u!4 &259901821
 Transform:
@@ -26699,7 +26699,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 64518191158647524, guid: 331560f2206dc024cb084301a19c05ad, type: 3}
+    - {fileID: 64379194597998066, guid: 331560f2206dc024cb084301a19c05ad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 331560f2206dc024cb084301a19c05ad, type: 3}
 --- !u!1001 &2761487448621725052
 PrefabInstance:
@@ -27826,17 +27828,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6a41b3b46f4914e0c8c82d49ce1dc8da, type: 3}
---- !u!114 &4444741979544495747 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1491641897, guid: 6a41b3b46f4914e0c8c82d49ce1dc8da, type: 3}
-  m_PrefabInstance: {fileID: 4444741979544495746}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa338ec6f03334c4fbf7e2d1daef47aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4485200054293206080
 PrefabInstance:
   m_ObjectHideFlags: 0

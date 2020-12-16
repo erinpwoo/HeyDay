@@ -71,7 +71,8 @@ public class TruckController : MonoBehaviour
         _transform.rotation = _quat;
         if (transform.up.y <= 0)
         {
-            levelController.GameOver();
+            if (levelController != null)
+                levelController.GameOver();
         }
     }
 

@@ -10,18 +10,28 @@ public class TutorialLevel : MonoBehaviour
     public GameObject minimapCam;
     public GameObject pauseMenu;
     public bool isPaused;
-    float currCounter = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        minimapWindow = GameObject.FindGameObjectWithTag("Minimap window");
         minimapWindow.SetActive(true);
-        player.hasStarted = true;
+        pauseMenu.SetActive(false);
+        isPaused = false;
+    }
+
+    void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!player.hasStarted)
+        {
+            player.hasStarted = true;
+        }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isPaused)
