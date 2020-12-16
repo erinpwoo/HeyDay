@@ -75,6 +75,7 @@
     <Compile Include="Assets/LeanTween/Framework/LTDescrOptional.cs" />
     <Compile Include="Assets/LeanTween/Framework/LTDescr.cs" />
     <Compile Include="Assets/Scripts/MainMenu.cs" />
+    <Compile Include="Assets/Scripts/TutorialLevel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/LeanTween/ReadMe.txt" />

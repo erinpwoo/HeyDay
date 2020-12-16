@@ -1,14 +1,21 @@
 ﻿<Properties StartupConfiguration="{04D39242-4649-988B-88BE-E2CFBC165599}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Player.cs" Line="70" Column="25" />
-      <File FileName="Assets/Scripts/Building.cs" Line="43" Column="42" />
-      <File FileName="Assets/Scripts/LevelController.cs" Line="67" Column="14" />
-      <File FileName="Assets/Scripts/Bar.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PackageArea.cs" Line="22" Column="47" />
-      <File FileName="Assets/Scripts/DragAndShoot.cs" Line="34" Column="14" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Player.cs" Line="17" Column="5" NotebookId="1" />
+      <File FileName="Assets/Scripts/Building.cs" Line="43" Column="42" NotebookId="1" />
+      <File FileName="Assets/Scripts/LevelController.cs" Line="115" Column="13" NotebookId="1" />
+      <File FileName="Assets/Scripts/Bar.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Scripts/PackageArea.cs" Line="22" Column="47" NotebookId="1" />
+      <File FileName="Assets/Scripts/DragAndShoot.cs" Line="34" Column="14" NotebookId="1" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="16" Column="12" NotebookId="1" />
     </Files>
+    <FloatingWindows>
+      <FloatingWindow WindowId="1" X="2805" Y="128" Width="989" Height="1216">
+        <Files>
+          <File FileName="Assets/Scripts/TutorialLevel.cs" Line="20" Column="6" />
+        </Files>
+      </FloatingWindow>
+    </FloatingWindows>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
