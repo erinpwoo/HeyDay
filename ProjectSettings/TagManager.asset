@@ -16,6 +16,10 @@ TagManager:
   - Level timer
   - Fail level
   - LevelController
+  - Traffic cone
+  - Large prop
+  - Medium prop
+  - Small prop
   layers:
   - Default
   - TransparentFX

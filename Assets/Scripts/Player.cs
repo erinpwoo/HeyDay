@@ -63,4 +63,18 @@ public class Player : MonoBehaviour
  
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.tag == "Small prop")
+        {
+            points -= 5;
+        } else if (collision.transform.tag == "Medium prop")
+        {
+            points -= 10;
+        } else if (collision.transform.tag == "Large prop")
+        {
+            points -= 15;
+        }
+    }
+
 }

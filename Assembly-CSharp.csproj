@@ -74,10 +74,12 @@
     <Compile Include="Assets/LeanTween/Framework/LeanTweenExt.cs" />
     <Compile Include="Assets/LeanTween/Framework/LTDescrOptional.cs" />
     <Compile Include="Assets/LeanTween/Framework/LTDescr.cs" />
+    <Compile Include="Assets/Scripts/MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/LeanTween/ReadMe.txt" />
      <None Include="Assets/LeanTween/License.txt" />
+     <None Include="Assets/UI/_omika-poster/Komika.txt" />
      <None Include="Assets/TurnTheGameOn/Arrow WayPointer/Read Me.txt" />
      <None Include="Assets/Single_detailed_truck/readme.txt" />
      <None Include="Assets/POLYGON city pack/Read_me.txt" />
