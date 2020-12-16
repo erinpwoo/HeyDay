@@ -28,37 +28,27 @@ public class Building : MonoBehaviour
         
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public void CheckPackageCollision(string packageType)
     {
-        if (requestedPackageType == null)
+        if (packageType == "No-rush")
         {
-            return;
+            player.points += 10;
+            timer.GetComponent<Bar>().CancelBarTimer();
+            Destroy(timer);
+            isTimerRunning = false;
+            requestedPackageType = null;
+            PlayDoorbell();
+            Destroy(arrow);
         }
-        if (collision.gameObject.CompareTag("No-rush"))
+        else if (packageType == "Standard")
         {
-            if (requestedPackageType == "No rush")
-            {
-                player.points += 10;
-                timer.GetComponent<Bar>().CancelBarTimer();
-                Destroy(timer);
-                isTimerRunning = false;
-                requestedPackageType = null;
-                PlayDoorbell();
-                Destroy(arrow);
-            }
-        }
-        else if (collision.gameObject.CompareTag("Standard"))
-        {
-            if (requestedPackageType == "Standard")
-            {
-                player.points += 15;
-                timer.GetComponent<Bar>().CancelBarTimer();
-                Destroy(timer);
-                isTimerRunning = false;
-                requestedPackageType = null;
-                PlayDoorbell();
-                Destroy(arrow);
-            }
+            player.points += 15;
+            timer.GetComponent<Bar>().CancelBarTimer();
+            Destroy(timer);
+            isTimerRunning = false;
+            requestedPackageType = null;
+            PlayDoorbell();
+            Destroy(arrow);
         }
         player.UpdatePointsUI();
     }

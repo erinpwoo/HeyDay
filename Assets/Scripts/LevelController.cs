@@ -18,6 +18,8 @@ public class LevelController : MonoBehaviour
     public bool isGameRunning;
     public int pointThreshold;
     public Vector3 playerStartPosition;
+    public GameObject pauseMenu;
+    public bool isPaused;
     
     // Start is called before the first frame update
     void Start()
@@ -40,11 +42,30 @@ public class LevelController : MonoBehaviour
         failLevelText = GameObject.FindGameObjectWithTag("Fail level");
         failLevelText.SetActive(false);
         isGameRunning = false;
+        pauseMenu.SetActive(false);
+        isPaused = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (isPaused)
+            {
+                Time.timeScale = 1;
+                pauseMenu.SetActive(false);
+                isPaused = false;
+                AudioListener.pause = false;
+            }
+            else
+            {
+                Time.timeScale = 0;
+                pauseMenu.SetActive(true);
+                isPaused = true;
+                AudioListener.pause = true;
+            }
+        }
         if (player.hasStarted && isGameRunning)
         {
             currCounter -= Time.deltaTime;
@@ -122,6 +143,29 @@ public class LevelController : MonoBehaviour
     }
 
     public void PassedToNextLevel ()
+    {
+
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
+
+    public void ResumeGame()
+    {
+        if (isPaused)
+        {
+            Time.timeScale = 1;
+            pauseMenu.SetActive(false);
+            isPaused = false;
+            AudioListener.pause = false;
+        }
+        
+    }
+
+    public void NavigateToMainMenu()
     {
 
     }
