@@ -27,21 +27,17 @@ public class DragAndShoot : MonoBehaviour
     {
         if (!isShoot)
         {
+            transform.rotation = launchPos.transform.rotation;
             if (!isMouseDown)
             {
                 transform.position = launchPos.transform.position;
-                transform.rotation = launchPos.transform.rotation;
+            }
+            else
+            {
+                transform.position = GetMouseWorldPos() + mOffset;
             }
         }
         
-    }
-
-    private void OnMouseDrag()
-    {
-        if (!isShoot && isMouseDown)
-        {
-            transform.position = GetMouseWorldPos() + mOffset;
-        }
     }
 
     private void OnMouseDown()
