@@ -81,7 +81,7 @@ public class LevelController : MonoBehaviour
                 }
             }
 
-            float timeLeft = 120 - (Time.time - startTime);
+            float timeLeft = 119 - (Time.time - startTime);
             float minutes = Mathf.Floor(timeLeft / 60);
             float seconds = Mathf.RoundToInt(timeLeft % 60);
             if (seconds < 10)

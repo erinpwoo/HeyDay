@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 129180752731771587}
   m_Layer: 0
   m_Name: traffic_obj prefab
-  m_TagString: Traffic cone
+  m_TagString: Small prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
