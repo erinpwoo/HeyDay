@@ -339,8 +339,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 198.69, y: -39.74}
-  m_SizeDelta: {x: 377.10486, y: 67.86229}
+  m_AnchoredPosition: {x: 199.05, y: -36.9}
+  m_SizeDelta: {x: 376.3767, y: 62.18608}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &34715900
 MonoBehaviour:
@@ -3530,6 +3530,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 748488401}
   isPaused: 0
   instructionPanel: {fileID: 0}
+  buildingExample: {fileID: 1664139149}
   tutorialText:
   - "Today is your first day as a delivery person for the mega e-commerce company,
     Zaminon\xAE. Lucky you, today is the busiest shopping day of the year due to
@@ -5824,8 +5825,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 129.9, y: -21.9}
-  m_SizeDelta: {x: 221.55103, y: 30.399895}
+  m_AnchoredPosition: {x: 131.47, y: -21.9}
+  m_SizeDelta: {x: 224.73236, y: 30.399895}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &405269721
 MonoBehaviour:
@@ -21061,6 +21062,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c469c07c5b45c454db32065c2f59b36b, type: 3}
+--- !u!1 &1664139149 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1769148396902374, guid: daa1a100f65deb34787ae1bb55d44a76, type: 3}
+  m_PrefabInstance: {fileID: 1616446511}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1672256258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4499070825876286, guid: 84bb406b82cecb24cb1ffe5d4359339d, type: 3}
