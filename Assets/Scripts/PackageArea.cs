@@ -26,6 +26,11 @@ public class PackageArea : MonoBehaviour
             (other.gameObject.CompareTag("Standard") && (parent.requestedPackageType == "Standard")) ||
             (other.gameObject.CompareTag("2-day") && (parent.requestedPackageType == "2-day")))
         {
+            if (other.gameObject.GetComponent<DragAndShoot>().hasDelivered == true)
+            {
+                return;
+            }
+            other.gameObject.GetComponent<DragAndShoot>().hasDelivered = true;
             parent.CheckPackageCollision(other.gameObject.tag);
         }
     }

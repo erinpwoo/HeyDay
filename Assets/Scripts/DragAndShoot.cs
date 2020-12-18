@@ -15,6 +15,7 @@ public class DragAndShoot : MonoBehaviour
     private float mZCoord;
     float mouseVelocityX;
     float mouseVelocityY;
+    public bool hasDelivered = false;
 
     void Start()
     {
@@ -23,6 +24,7 @@ public class DragAndShoot : MonoBehaviour
         launchPos = GameObject.FindGameObjectWithTag("Package spawn");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         isMouseDown = false;
+        hasDelivered = false;
     }
 
     private void Update()
@@ -78,7 +80,7 @@ public class DragAndShoot : MonoBehaviour
         
     }
 
-    private float forceMultiplier = 60;
+    private float forceMultiplier = 50;
     void Shoot(Vector3 Force)
     {
         if (isShoot)

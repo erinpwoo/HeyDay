@@ -73,6 +73,8 @@ public class LevelController : MonoBehaviour
         else if (currentScene.name == "Level 3")
         {
             pointThreshold = 200;
+            whatsNew.GetComponentInChildren<Text>().text = "Welcome to round 3! To move to round 4, you'll need to make at least 200 pts. We have more buildings to deliver to this round, so you better get on it!";
+
         }
         else if (currentScene.name == "Level 4")
         {
