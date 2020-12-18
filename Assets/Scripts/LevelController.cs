@@ -61,7 +61,9 @@ public class LevelController : MonoBehaviour
 
         if (currentScene.name == "Level 1")
         {
+            whatsNew.GetComponentInChildren<Text>().text = "Welcome to the first round! In order to move on to level 2, you make at least 80 points worth of deliveries.\n\n Good luck!";
             pointThreshold = 80;
+
         }
         else if (currentScene.name == "Level 2")
         {

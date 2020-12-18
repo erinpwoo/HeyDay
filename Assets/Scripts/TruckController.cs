@@ -82,8 +82,47 @@ public class TruckController : MonoBehaviour
         {
             GetInput();
             Steer();
-            Accelerate();
+            if (Input.GetAxis("Vertical") != 0)
+            {
+                Unbrake();
+                Accelerate();
+            } else
+            {
+                Brake();
+            }
             UpdateWheelPoses();
         }
+    }
+
+    private void Brake()
+    {
+        frontLeftW.brakeTorque = 500;
+        frontRightW.brakeTorque = 500;
+        trailer1_leftW.brakeTorque = 500;
+        trailer1_rightW.brakeTorque = 500;
+        trailer2_leftW.brakeTorque = 500;
+        trailer2_rightW.brakeTorque = 500;
+        trailer3_leftW.brakeTorque = 500;
+        trailer3_rightW.brakeTorque = 500;
+        trailer4_leftW.brakeTorque = 500;
+        trailer4_rightW.brakeTorque = 500;
+        trailer5_leftW.brakeTorque = 500;
+        trailer5_rightW.brakeTorque = 500;
+    }
+
+    private void Unbrake()
+    {
+        frontLeftW.brakeTorque = 0;
+        frontRightW.brakeTorque = 0;
+        trailer1_leftW.brakeTorque = 0;
+        trailer1_rightW.brakeTorque = 0;
+        trailer2_leftW.brakeTorque = 0;
+        trailer2_rightW.brakeTorque = 0;
+        trailer3_leftW.brakeTorque = 0;
+        trailer3_rightW.brakeTorque = 0;
+        trailer4_leftW.brakeTorque = 0;
+        trailer4_rightW.brakeTorque = 0;
+        trailer5_leftW.brakeTorque = 0;
+        trailer5_rightW.brakeTorque = 0;
     }
 }

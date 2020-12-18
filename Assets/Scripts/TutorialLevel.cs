@@ -23,8 +23,9 @@ public class TutorialLevel : MonoBehaviour
     {
         tutorialText = new string[] {
             "Today is your first day as a delivery person for the mega e-commerce company, Zaminon®. Lucky you, today is the busiest shopping day of the year due to Zaminon’s yearly sales event, HeyDay! As you navigate through the chaos of your first day, you are tasked with navigating the vehicle throughout the neighborhood while launching the correct type of packages at their specified locations in a timely manner . Driving this massive vehicle is no easy task, and neither is getting these packages delivered at their correct locations.",
-            "To launch packages, right click to spawn one of the package types above the vehicle. Continuing to right click will allow you to cycle through your package inventory to find the correct package type. Here, you have two package types: \n\n\t* Standard (red) - 15 points - 60 sec.\n\t* No-rush (purple) - 10 points - 50 sec.\n\nEach package type will have its own point value that depends on the delivery speed. The less time you have to deliver the package type, the more points that package is worth. If you fail to make a delivery on time, the point value of that missed package will be deducted from your score.",
-            "Now let's try launching a package! To grab a package, left click on the spawned package's location on the screen. Hold, drag, and release the mouse to throw it in the direction of where you want to launch it. Once you throw a package, left click to re-spawn a new package from your inventory.",
+            "To launch packages, right click to spawn one of the package types above the vehicle. Continuing to right click will allow you to cycle through your package inventory to find the correct package type. Give it a try!",
+            "Here, you have two package types: \n\n\t* Standard (red) - 15 points - 60 sec.\n\t* No-rush (purple) - 10 points - 50 sec.\n\nEach package type will have its own point value that depends on the delivery speed. The less time you have to deliver the package type, the more points that package is worth. If you fail to make a delivery on time, the point value of that missed package will be deducted from your score.",
+            "Now let's try launching a package! To grab a package, left click on the spawned package. Hold, drag, and release the mouse to throw it in the direction of where you want to launch it. Once you throw a package, left click to re-spawn a new package from your inventory.",
             "A house requesting a package will appear as a location on your minimap in the bottom-right corner of your screen. You will also see an arrow spawn above the house, indicating the location on the scene. The bar on the minimap will be colored based on the requested package type and will display the amount of time you have left to deliver a package.",
             "Let's try navigating towards the house. To navigate the vehicle:\n\tW/S: accelerate forwards/backwards \n\tA/D: Steer left/right\n\n Hitting street objects will result in point deductions, so watch where you drive! The larger the object you hit, the larger the point deductions.",
             "In order to make a successful delivery, the delivery needs to be delivered in an area within the perimeter of the house. Upon a successful delivery, you should hear a doorbell and the arrow above the house should disappear.",
@@ -107,7 +108,7 @@ public class TutorialLevel : MonoBehaviour
             SceneManager.LoadScene("Level 1");
         }
         instructionPanel.GetComponentInChildren<Text>().text = tutorialText[currTextIndex];
-        if (currTextIndex == 3)
+        if (currTextIndex == 4)
         {
             buildingExample.transform.Find("Package area").GetComponent<MeshRenderer>().enabled = true;
             buildingExample.GetComponent<Building>().SpawnOrder("Standard");

@@ -86,14 +86,14 @@ public class Building : MonoBehaviour
 
     public void DecrementPoints()
     {
-        if (requestedPackageType == "No-rush")
+        if (requestedPackageType == "No-rush" && player.points >= 10)
         {
             player.points -= 10;
-        } else if (requestedPackageType == "Standard")
+        } else if (requestedPackageType == "Standard" && player.points >= 15)
         {
             player.points -= 15;
         }
-        else if (requestedPackageType == "2-day")
+        else if (requestedPackageType == "2-day" && player.points >= 20)
         {
             player.points -= 20;
         }

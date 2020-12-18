@@ -13,6 +13,8 @@ public class DragAndShoot : MonoBehaviour
     private bool isMouseDown;
     private Vector3 mOffset;
     private float mZCoord;
+    float mouseVelocityX;
+    float mouseVelocityY;
 
     void Start()
     {
@@ -32,6 +34,8 @@ public class DragAndShoot : MonoBehaviour
         {
             MouseUp();
         }
+        mouseVelocityX = Input.GetAxis("Mouse X");
+        mouseVelocityY = Input.GetAxis("Mouse Y");
         if (!isShoot)
         {
             transform.rotation = launchPos.transform.rotation;
@@ -65,7 +69,7 @@ public class DragAndShoot : MonoBehaviour
     private void MouseUp()
     {
         mouseReleasePos = Input.mousePosition;
-        Shoot(mouseReleasePos - mousePressDownPos);
+        Shoot(new Vector3(mouseVelocityX, mouseVelocityY/2, mouseVelocityY));
         isMouseDown = false;
         if (player.currPackage == gameObject)
         {
@@ -74,13 +78,13 @@ public class DragAndShoot : MonoBehaviour
         
     }
 
-    private float forceMultiplier = 7;
+    private float forceMultiplier = 60;
     void Shoot(Vector3 Force)
     {
         if (isShoot)
             return;
         isShoot = true;
-        rb.AddRelativeForce(new Vector3(Force.x, Force.y/2, Force.y) * forceMultiplier);
+        rb.AddRelativeForce(new Vector3(Force.x * forceMultiplier, Force.y * forceMultiplier / 1.7f, Force.y * forceMultiplier) * forceMultiplier);
     }
 
 }

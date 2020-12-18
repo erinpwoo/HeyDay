@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
                 SwitchPackage();
             }
         }
+        minimapCam.transform.position = new Vector3(transform.position.x, minimapCam.transform.position.y, transform.position.z);
         minimapCam.transform.rotation = Quaternion.Euler(minimapCam.transform.eulerAngles.x, gameObject.transform.eulerAngles.y, minimapCam.transform.eulerAngles.z);
     }
 
@@ -67,17 +68,26 @@ public class Player : MonoBehaviour
     {
         if (collision.transform.tag == "Small prop")
         {
-            points -= 5;
-            UpdatePointsUI();
+            if (points >= 5)
+            {
+                points -= 5;
+                UpdatePointsUI();
+            }
+            
         } else if (collision.transform.tag == "Medium prop")
         {
-            points -= 10;
-            UpdatePointsUI();
-        } else if (collision.
-            transform.tag == "Large prop")
+            if (points >= 10)
+            {
+                points -= 10;
+                UpdatePointsUI();
+            }
+        } else if (collision.transform.tag == "Large prop")
         {
-            points -= 15;
-            UpdatePointsUI();
+            if (points >= 15)
+            {
+                points -= 15;
+                UpdatePointsUI();
+            }
         }
     }
 
