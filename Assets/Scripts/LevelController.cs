@@ -139,6 +139,8 @@ public class LevelController : MonoBehaviour
                 buildings[i].timer.GetComponent<Bar>().CancelBarTimer();
                 buildings[i].isTimerRunning = false;
                 buildings[i].requestedPackageType = null;
+                Destroy(buildings[i].arrow);
+                Destroy(buildings[i].timer);
             }
             
         }
