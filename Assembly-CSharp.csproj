@@ -86,6 +86,7 @@
      <None Include="Assets/SynthPack/Hello Developer!.txt" />
      <None Include="Assets/Single_detailed_truck/readme.txt" />
      <None Include="Assets/POLYGON city pack/Read_me.txt" />
+     <None Include="Assets/VertexColorFarmAnimals/Shaders/VertexColorUnlit.shader" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/2020.1.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

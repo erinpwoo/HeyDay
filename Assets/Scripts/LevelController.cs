@@ -61,19 +61,19 @@ public class LevelController : MonoBehaviour
 
         if (currentScene.name == "Level 1")
         {
-            whatsNew.GetComponentInChildren<Text>().text = "Welcome to the first round! In order to move on to level 2, you make at least 80 points worth of deliveries.\n\n Good luck!";
-            pointThreshold = 80;
+            whatsNew.GetComponentInChildren<Text>().text = "Welcome to the first round! In order to move on to level 2, you make at least 50 points worth of deliveries.\n\n Good luck!";
+            pointThreshold = 50;
 
         }
         else if (currentScene.name == "Level 2")
         {
-            pointThreshold = 150;
-            whatsNew.GetComponentInChildren<Text>().text = "Welcome to round 2! To move to round 3, you'll need to make at least 150 pts. In this round, we'll be introducing:\n\nTwo-day shipping packages (BLUE):\nTime limit = 40 sec.\nPoint value: 20 pts";
+            pointThreshold = 80;
+            whatsNew.GetComponentInChildren<Text>().text = "Welcome to round 2! To move to round 3, you'll need to make at least 80 pts. In this round, we'll be introducing:\n\nTwo-day shipping packages (BLUE):\nTime limit = 40 sec.\nPoint value: 20 pts";
         }
         else if (currentScene.name == "Level 3")
         {
-            pointThreshold = 200;
-            whatsNew.GetComponentInChildren<Text>().text = "Welcome to round 3! To move to round 4, you'll need to make at least 200 pts. We have more buildings to deliver to this round, so you better get on it!";
+            pointThreshold = 100;
+            whatsNew.GetComponentInChildren<Text>().text = "Welcome to round 3! To move to round 4, you'll need to make at least 100 pts. We have more buildings to deliver to this round, so you better get on it!";
 
         }
         else if (currentScene.name == "Level 4")
@@ -220,11 +220,11 @@ public class LevelController : MonoBehaviour
         }
         else if (currentScene.name == "Level 3")
         {
-            SceneManager.LoadScene("Level 4");
+            //SceneManager.LoadScene("Level 4");
         }
         else if (currentScene.name == "Level 4")
         {
-            SceneManager.LoadScene("Level 5");
+            //SceneManager.LoadScene("Level 5");
         }
     }
 
