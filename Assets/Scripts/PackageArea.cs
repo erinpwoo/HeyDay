@@ -26,7 +26,6 @@ public class PackageArea : MonoBehaviour
             (other.gameObject.CompareTag("Standard") && (parent.requestedPackageType == "Standard")) ||
             (other.gameObject.CompareTag("2-day") && (parent.requestedPackageType == "2-day")))
         {
-            print(other.gameObject.tag);
             parent.CheckPackageCollision(other.gameObject.tag);
         }
     }

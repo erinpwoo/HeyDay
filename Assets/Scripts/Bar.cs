@@ -48,8 +48,8 @@ public class Bar : MonoBehaviour
         LeanTween.cancel(bar);
         building.DecrementPoints();
         building.isTimerRunning = false;
-        Destroy(building.timer);
         Destroy(timer);
+        Destroy(building.arrow);
     }
 
     public void CancelBarTimer()
