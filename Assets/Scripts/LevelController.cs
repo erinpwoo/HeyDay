@@ -41,7 +41,8 @@ public class LevelController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         minimapWindow.SetActive(false);
         startButton.SetActive(true);
-        whatsNew.SetActive(true);
+        if (whatsNew != null)
+            whatsNew.SetActive(true);
         timer = GameObject.FindGameObjectWithTag("Level timer");
         startTime = Time.time;
         failLevelText = GameObject.FindGameObjectWithTag("Fail level");
@@ -65,7 +66,7 @@ public class LevelController : MonoBehaviour
         else if (currentScene.name == "Level 2")
         {
             pointThreshold = 150;
-            whatsNew.GetComponentInChildren<Text>().text = "Welcome to round 2! In this round, we'll be introducing:\n\nTwo-day shipping packages (BLUE):\nTime limit = 40 sec.\nPoint value: 20 pts";
+            whatsNew.GetComponentInChildren<Text>().text = "Welcome to round 2! To move to round 3, you'll need to make at least 150 pts. In this round, we'll be introducing:\n\nTwo-day shipping packages (BLUE):\nTime limit = 40 sec.\nPoint value: 20 pts";
         }
         else if (currentScene.name == "Level 3")
         {
@@ -147,7 +148,8 @@ public class LevelController : MonoBehaviour
             isGameRunning = true;
             failLevelText.SetActive(false);
             startButton.SetActive(false);
-            whatsNew.SetActive(false);
+            if (whatsNew != null)
+                whatsNew.SetActive(false);
             startTime = Time.time;
             player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }

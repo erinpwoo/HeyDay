@@ -25,6 +25,13 @@ public class DragAndShoot : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !isMouseDown) {
+            MouseDown();
+        }
+        if (Input.GetKeyUp(KeyCode.Mouse0) && isMouseDown)
+        {
+            MouseUp();
+        }
         if (!isShoot)
         {
             transform.rotation = launchPos.transform.rotation;
@@ -40,7 +47,7 @@ public class DragAndShoot : MonoBehaviour
         
     }
 
-    private void OnMouseDown()
+    private void MouseDown()
     {
         mousePressDownPos = Input.mousePosition;
         isMouseDown = true;
@@ -55,7 +62,7 @@ public class DragAndShoot : MonoBehaviour
         return Camera.main.ScreenToWorldPoint(mousePoint);
     }
 
-    private void OnMouseUp()
+    private void MouseUp()
     {
         mouseReleasePos = Input.mousePosition;
         Shoot(mouseReleasePos - mousePressDownPos);
