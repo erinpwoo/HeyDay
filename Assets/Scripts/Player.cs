@@ -68,12 +68,16 @@ public class Player : MonoBehaviour
         if (collision.transform.tag == "Small prop")
         {
             points -= 5;
+            UpdatePointsUI();
         } else if (collision.transform.tag == "Medium prop")
         {
             points -= 10;
-        } else if (collision.transform.tag == "Large prop")
+            UpdatePointsUI();
+        } else if (collision.
+            transform.tag == "Large prop")
         {
             points -= 15;
+            UpdatePointsUI();
         }
     }
 
