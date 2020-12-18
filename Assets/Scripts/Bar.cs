@@ -17,12 +17,15 @@ public class Bar : MonoBehaviour
     void Start()
     {
         isTimerUp = false;
-        if (building.requestedPackageType == "No rush")
+        if (building.requestedPackageType == "No-rush")
         {
             bar.GetComponent<Image>().color = new Color(138/255f, 43/255f, 226/255f);
         } else if (building.requestedPackageType == "Standard")
         {
             bar.GetComponent<Image>().color = Color.red;
+        } else if (building.requestedPackageType == "2-day")
+        {
+            bar.GetComponent<Image>().color = Color.blue;
         }
     }
 
@@ -45,6 +48,7 @@ public class Bar : MonoBehaviour
         LeanTween.cancel(bar);
         building.DecrementPoints();
         building.isTimerRunning = false;
+        Destroy(building.timer);
         Destroy(timer);
     }
 

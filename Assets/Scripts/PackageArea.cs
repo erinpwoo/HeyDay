@@ -19,15 +19,16 @@ public class PackageArea : MonoBehaviour
         
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        if (parent.requestedPackageType == null)
-            return;
-
+        if (parent.requestedPackageType == null) return;
         if ((other.gameObject.CompareTag("No-rush") && (parent.requestedPackageType == "No rush")) ||
-            (other.gameObject.CompareTag("Standard") && (parent.requestedPackageType == "Standard")))
+            (other.gameObject.CompareTag("Standard") && (parent.requestedPackageType == "Standard")) ||
+            (other.gameObject.CompareTag("2-day") && (parent.requestedPackageType == "2-day")))
         {
+            print(other.gameObject.tag);
             parent.CheckPackageCollision(other.gameObject.tag);
         }
     }
+        
 }

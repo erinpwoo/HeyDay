@@ -13,7 +13,7 @@ public class Building : MonoBehaviour
     public bool isTimerRunning;
     public AudioSource doorbell;
     public GameObject arrowPrefab;
-    private GameObject arrow;
+    public GameObject arrow;
 
     private void Start()
     {
@@ -50,6 +50,16 @@ public class Building : MonoBehaviour
             PlayDoorbell();
             Destroy(arrow);
         }
+        else if (packageType == "2-day")
+        {
+            player.points += 20;
+            timer.GetComponent<Bar>().CancelBarTimer();
+            Destroy(timer);
+            isTimerRunning = false;
+            requestedPackageType = null;
+            PlayDoorbell();
+            Destroy(arrow);
+        }
         player.UpdatePointsUI();
     }
 
@@ -57,12 +67,17 @@ public class Building : MonoBehaviour
     {
         isTimerRunning = true;
         timer = Instantiate(timerPrefab, timerPosition);
-        if (packageType == "No rush")
+        if (packageType == "No-rush")
         {
             timer.GetComponent<Bar>().time = 60;
-        } else if (packageType == "Standard")
+        }
+        else if (packageType == "Standard")
         {
             timer.GetComponent<Bar>().time = 50;
+        }
+        else if (packageType == "2-day")
+        {
+            timer.GetComponent<Bar>().time = 40;
         }
         requestedPackageType = packageType;
         timer.GetComponent<Bar>().AnimateBar(timer, this);
@@ -71,12 +86,16 @@ public class Building : MonoBehaviour
 
     public void DecrementPoints()
     {
-        if (requestedPackageType == "No rush")
+        if (requestedPackageType == "No-rush")
         {
             player.points -= 10;
         } else if (requestedPackageType == "Standard")
         {
             player.points -= 15;
+        }
+        else if (requestedPackageType == "2-day")
+        {
+            player.points -= 20;
         }
         player.UpdatePointsUI();
         requestedPackageType = null;

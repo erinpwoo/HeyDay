@@ -27,7 +27,6 @@ public class LevelController : MonoBehaviour
     {
         // initializing level values
         GameObject[] buildingObjs = GameObject.FindGameObjectsWithTag("Buildings");
-        availPackageTypes = new string[] { "No rush", "Standard" };
         for (int i = 0; i < buildingObjs.Length; i++)
         {
             buildings.Add(buildingObjs[i].GetComponent<Building>());
@@ -45,6 +44,11 @@ public class LevelController : MonoBehaviour
         isGameRunning = false;
         pauseMenu.SetActive(false);
         isPaused = false;
+        availPackageTypes = new string[player.availablePackages.Length];
+        for (int i = 0; i < player.availablePackages.Length; i++)
+        {
+            availPackageTypes[i] = player.availablePackages[i].tag;
+        }
     }
 
     // Update is called once per frame
