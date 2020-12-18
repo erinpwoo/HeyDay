@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets/TurnTheGameOn/Arrow WayPointer/Scripts/Waypoint.cs" />
     <Compile Include="Assets/Scripts/TruckController.cs" />
+    <Compile Include="Assets/Scripts/TutorialLevel.cs" />
     <Compile Include="Assets/LeanTween/Framework/LTSeq.cs" />
     <Compile Include="Assets/LeanTween/Framework/LeanSmooth.cs" />
     <Compile Include="Assets/LeanTween/Framework/LeanTest.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="Assets/Scripts/Player.cs" />
     <Compile Include="Assets/LeanTween/Framework/LeanTween.cs" />
     <Compile Include="Assets/LeanTween/Framework/LeanAudio.cs" />
+    <Compile Include="Assets/Scripts/MainMenu.cs" />
     <Compile Include="Assets/Scripts/Building.cs" />
     <Compile Include="Assets/Scripts/PackageArea.cs" />
     <Compile Include="Assets/Scripts/DragAndShoot.cs" />
@@ -74,14 +76,14 @@
     <Compile Include="Assets/LeanTween/Framework/LeanTweenExt.cs" />
     <Compile Include="Assets/LeanTween/Framework/LTDescrOptional.cs" />
     <Compile Include="Assets/LeanTween/Framework/LTDescr.cs" />
-    <Compile Include="Assets/Scripts/MainMenu.cs" />
-    <Compile Include="Assets/Scripts/TutorialLevel.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets/LeanTween/ReadMe.txt" />
+     <None Include="Assets/Fantasy Skybox FREE/Readme.txt" />
      <None Include="Assets/LeanTween/License.txt" />
      <None Include="Assets/UI/_omika-poster/Komika.txt" />
      <None Include="Assets/TurnTheGameOn/Arrow WayPointer/Read Me.txt" />
+     <None Include="Assets/SynthPack/Hello Developer!.txt" />
      <None Include="Assets/Single_detailed_truck/readme.txt" />
      <None Include="Assets/POLYGON city pack/Read_me.txt" />
     <Reference Include="UnityEngine">
