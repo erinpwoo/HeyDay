@@ -114,7 +114,7 @@ public class TutorialLevel : MonoBehaviour
         }
         if (currTextIndex == maxTextIndex)
         {
-            contToLevel1.GetComponentInChildren<Text>().text = "Start level 1";
+            contToLevel1.GetComponentInChildren<Text>().text = "Start!";
         }
     }
 }

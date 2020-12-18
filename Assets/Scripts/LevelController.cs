@@ -21,6 +21,10 @@ public class LevelController : MonoBehaviour
     public Vector3 playerStartPosition;
     public GameObject pauseMenu;
     public bool isPaused;
+    public GameObject nextLevelButton;
+    public GameObject nextLevelText;
+    public GameObject whatsNew;
+    Scene currentScene;
     
     // Start is called before the first frame update
     void Start()
@@ -37,6 +41,7 @@ public class LevelController : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
         minimapWindow.SetActive(false);
         startButton.SetActive(true);
+        whatsNew.SetActive(true);
         timer = GameObject.FindGameObjectWithTag("Level timer");
         startTime = Time.time;
         failLevelText = GameObject.FindGameObjectWithTag("Fail level");
@@ -48,6 +53,27 @@ public class LevelController : MonoBehaviour
         for (int i = 0; i < player.availablePackages.Length; i++)
         {
             availPackageTypes[i] = player.availablePackages[i].tag;
+        }
+        nextLevelButton.SetActive(false);
+        nextLevelText.SetActive(false);
+        currentScene = SceneManager.GetActiveScene();
+
+        if (currentScene.name == "Level 1")
+        {
+            pointThreshold = 80;
+        }
+        else if (currentScene.name == "Level 2")
+        {
+            pointThreshold = 150;
+            whatsNew.GetComponentInChildren<Text>().text = "Welcome to round 2! In this round, we'll be introducing:\n\nTwo-day shipping packages (BLUE):\nTime limit = 40 sec.\nPoint value: 20 pts";
+        }
+        else if (currentScene.name == "Level 3")
+        {
+            pointThreshold = 200;
+        }
+        else if (currentScene.name == "Level 4")
+        {
+            pointThreshold = 250;
         }
     }
 
@@ -121,6 +147,7 @@ public class LevelController : MonoBehaviour
             isGameRunning = true;
             failLevelText.SetActive(false);
             startButton.SetActive(false);
+            whatsNew.SetActive(false);
             startTime = Time.time;
             player.GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
@@ -151,12 +178,48 @@ public class LevelController : MonoBehaviour
 
     public void PassedToNextLevel ()
     {
+        isGameRunning = false;
+        player.hasStarted = false;
+        minimapWindow.SetActive(false);
+        for (int i = 0; i < buildings.Count; i++)
+        {
+            if (buildings[i].isTimerRunning)
+            {
+                buildings[i].timer.GetComponent<Bar>().CancelBarTimer();
+                buildings[i].isTimerRunning = false;
+                buildings[i].requestedPackageType = null;
+                Destroy(buildings[i].arrow);
+                Destroy(buildings[i].timer);
+            }
 
+        }
+        player.points = 0;
+        nextLevelText.SetActive(true);
+        nextLevelText.SetActive(true);
     }
 
     public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void GoToNextLevel()
+    {
+        if (currentScene.name == "Level 1")
+        {
+            SceneManager.LoadScene("Level 2");
+        } else if (currentScene.name == "Level 2")
+        {
+            SceneManager.LoadScene("Level 3");
+        }
+        else if (currentScene.name == "Level 3")
+        {
+            SceneManager.LoadScene("Level 4");
+        }
+        else if (currentScene.name == "Level 4")
+        {
+            SceneManager.LoadScene("Level 5");
+        }
     }
 
 
