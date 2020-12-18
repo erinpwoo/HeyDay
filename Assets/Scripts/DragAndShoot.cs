@@ -74,7 +74,7 @@ public class DragAndShoot : MonoBehaviour
         
     }
 
-    private float forceMultiplier = 10;
+    private float forceMultiplier = 7;
     void Shoot(Vector3 Force)
     {
         if (isShoot)
