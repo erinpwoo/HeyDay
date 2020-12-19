@@ -28455,6 +28455,10 @@ PrefabInstance:
       propertyPath: minimapCam
       value: 
       objectReference: {fileID: 373694415}
+    - target: {fileID: 1491641897, guid: 6a41b3b46f4914e0c8c82d49ce1dc8da, type: 3}
+      propertyPath: availablePackages.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1809844084, guid: 6a41b3b46f4914e0c8c82d49ce1dc8da, type: 3}
       propertyPath: m_LocalScale.x
       value: 5

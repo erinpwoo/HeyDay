@@ -90,7 +90,7 @@ public class Building : MonoBehaviour
         }
         else if (packageType == "Same day")
         {
-            timer.GetComponent<Bar>().time = 40;
+            timer.GetComponent<Bar>().time = 30;
         }
         requestedPackageType = packageType;
         timer.GetComponent<Bar>().AnimateBar(timer, this);
