@@ -53,6 +53,7 @@ public class LevelController : MonoBehaviour
         isGameRunning = false;
         pauseMenu.SetActive(false);
         isPaused = false;
+        Time.timeScale = 1;
         availPackageTypes = new string[player.availablePackages.Length];
         for (int i = 0; i < player.availablePackages.Length; i++)
         {

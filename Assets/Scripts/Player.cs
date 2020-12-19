@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
             if (points >= 5)
             {
                 points -= 5;
+                MakePointsRed();
                 UpdatePointsUI();
             }
             
@@ -78,6 +79,7 @@ public class Player : MonoBehaviour
             if (points >= 10)
             {
                 points -= 10;
+                MakePointsRed();
                 UpdatePointsUI();
             }
         } else if (collision.transform.tag == "Large prop")
@@ -85,9 +87,17 @@ public class Player : MonoBehaviour
             if (points >= 15)
             {
                 points -= 15;
+                MakePointsRed();
                 UpdatePointsUI();
             }
         }
+    }
+
+    public IEnumerator MakePointsRed()
+    {
+        pointsUI.color = Color.red;
+        yield return new WaitForSeconds(1);
+        pointsUI.color = Color.black;
     }
 
 }

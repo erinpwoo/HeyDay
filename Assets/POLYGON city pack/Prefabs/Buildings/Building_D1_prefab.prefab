@@ -180,7 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3345279754882120755}
   m_Layer: 0
-  m_Name: Tiimer position
+  m_Name: Timer position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -294,8 +294,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.1697187, y: 1.0341883, z: 1}
+  m_Center: {x: 0.084859386, y: -0.017093964, z: -6.278441e-16}
 --- !u!114 &1775239646004983646
 MonoBehaviour:
   m_ObjectHideFlags: 0

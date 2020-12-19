@@ -99,6 +99,7 @@ public class Building : MonoBehaviour
 
     public void DecrementPoints()
     {
+
         if (requestedPackageType == "No-rush" && player.points >= 10)
         {
             player.points -= 10;
@@ -116,6 +117,7 @@ public class Building : MonoBehaviour
         }
         player.UpdatePointsUI();
         requestedPackageType = null;
+        player.MakePointsRed();
     }
 
     public void PlayDoorbell()
