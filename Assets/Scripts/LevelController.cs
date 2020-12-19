@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class LevelController : MonoBehaviour
 {
     public List<Building> buildings;
-    public float duration = 15f;
+    public float duration;
     public string[] availPackageTypes;
     float currCounter = 0;
     public GameObject minimapWindow;
@@ -35,7 +35,10 @@ public class LevelController : MonoBehaviour
         {
             buildings.Add(buildingObjs[i].GetComponent<Building>());
         }
-
+        if (whatsNew != null)
+        {
+            whatsNew.SetActive(true);
+        }
         minimapWindow = GameObject.FindGameObjectWithTag("Minimap window");
         startButton = GameObject.FindGameObjectWithTag("Start button");
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
@@ -78,7 +81,8 @@ public class LevelController : MonoBehaviour
         }
         else if (currentScene.name == "Level 4")
         {
-            pointThreshold = 250;
+            pointThreshold = 120;
+            whatsNew.GetComponentInChildren<Text>().text = "Welcome to round 4! This is the last round, so make it count! To finish the game, you'll need to make 120 pts. Beware of hitting other cars!\nIn this round, we'll be introducing:\n\nSame day shipping packages (ORANGE):\nTime limit = 30 sec.\nPoint value: 30 pts";
         }
     }
 
@@ -147,6 +151,7 @@ public class LevelController : MonoBehaviour
         {
             player.transform.position = playerStartPosition;
             player.transform.rotation = new Quaternion(0, 0, 0, 1);
+            player.points = 0;
             minimapWindow.SetActive(true);
             player.hasStarted = true;
             isGameRunning = true;
@@ -165,6 +170,31 @@ public class LevelController : MonoBehaviour
         isGameRunning = false;
         player.hasStarted = false;
         minimapWindow.SetActive(false);
+        GameObject[] noRush = GameObject.FindGameObjectsWithTag("No-rush");
+        GameObject[] standard = GameObject.FindGameObjectsWithTag("Standard");
+        GameObject[] twoDay = GameObject.FindGameObjectsWithTag("2-day");
+        GameObject[] sameDay = GameObject.FindGameObjectsWithTag("Standard");
+
+        for (int i = 0; i < noRush.Length; i++)
+        {
+            noRush[i].SetActive(false);
+        }
+
+        for (int i = 0; i < standard.Length; i++)
+        {
+            standard[i].SetActive(false);
+        }
+
+        for (int i = 0; i < twoDay.Length; i++)
+        {
+            twoDay[i].SetActive(false);
+        }
+
+        for (int i = 0; i < sameDay.Length; i++)
+        {
+            sameDay[i].SetActive(false);
+        }
+
         for (int i = 0; i < buildings.Count; i++)
         {
             if (buildings[i].isTimerRunning)
@@ -201,7 +231,14 @@ public class LevelController : MonoBehaviour
         }
         player.points = 0;
         nextLevelText.SetActive(true);
-        nextLevelButton.SetActive(true);
+        if (currentScene.name == "Level 4")
+        {
+            nextLevelText.GetComponent<Text>().text = "You finished the last and hardest level, incredible! Press escape to navigate back to the main menu.";
+        } else
+        {
+            nextLevelButton.SetActive(true);
+        }
+        
     }
 
     public void QuitGame()
@@ -220,7 +257,7 @@ public class LevelController : MonoBehaviour
         }
         else if (currentScene.name == "Level 3")
         {
-            //SceneManager.LoadScene("Level 4");
+            SceneManager.LoadScene("Level 4");
         }
         else if (currentScene.name == "Level 4")
         {

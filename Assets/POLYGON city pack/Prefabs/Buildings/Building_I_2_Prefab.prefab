@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 1199332134306268}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 1.5000001, y: 1.5, z: 1.5000001}
   m_Children:
   - {fileID: 4003022234379868}
   - {fileID: 5137290047351049801}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7082690035962953178}
   m_Layer: 0
   m_Name: Building_I_2
-  m_TagString: Untagged
+  m_TagString: Buildings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448168269892838}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.0465, z: 0}
   m_LocalScale: {x: 100, y: 100.00002, z: 100.00002}
   m_Children:
   - {fileID: 4357323429042996}
@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 3544123615364759757}
   - component: {fileID: 2910158550407724512}
   - component: {fileID: 2771793586012891711}
+  - component: {fileID: 2837986349376869812}
   m_Layer: 0
   m_Name: Package area
   m_TagString: Untagged
@@ -278,8 +279,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1860793381983961017}
   m_LocalRotation: {x: -0, y: -0.000000119209275, z: 1, w: 0}
-  m_LocalPosition: {x: 0.01932, y: 0.05148, z: 0.004}
-  m_LocalScale: {x: 0.122475795, y: 0.12687889, z: 0.007499997}
+  m_LocalPosition: {x: 0.0618, y: 0.0462, z: 0.004}
+  m_LocalScale: {x: 0.20975313, y: 0.16796094, z: 0.007499997}
   m_Children: []
   m_Father: {fileID: 4003022234379868}
   m_RootOrder: 1
@@ -346,6 +347,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2837986349376869812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860793381983961017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb771997cc0f47ca971d2c152943c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}
 --- !u!1 &4426015310090154263
 GameObject:
   m_ObjectHideFlags: 0
@@ -370,7 +384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4426015310090154263}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.45, y: 17.69, z: -4.6}
+  m_LocalPosition: {x: 1.45, y: 17.69, z: -3.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4370792754970456}

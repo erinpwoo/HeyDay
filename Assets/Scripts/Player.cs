@@ -21,7 +21,6 @@ public class Player : MonoBehaviour
     {
         currPackageIndex = 0;
         spawnLocation = GameObject.FindGameObjectWithTag("Package spawn");
-        currPackage = availablePackages[currPackageIndex];
         pointsUI = GameObject.FindGameObjectWithTag("Points UI").GetComponent<Text>();
         hasStarted = false;
     }

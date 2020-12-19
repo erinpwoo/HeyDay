@@ -106,7 +106,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 2682e52c63253084ca380388ee483ba3, type: 3}
 --- !u!114 &1951486148
@@ -129,6 +129,7 @@ MonoBehaviour:
   isTimerRunning: 0
   doorbell: {fileID: 0}
   arrowPrefab: {fileID: 100002, guid: 0bf73d4b4f2d14346bb56b2164eda25f, type: 3}
+  arrow: {fileID: 0}
 --- !u!82 &1655975462
 AudioSource:
   m_ObjectHideFlags: 0
@@ -299,6 +300,7 @@ GameObject:
   - component: {fileID: 8207193380245621156}
   - component: {fileID: 1644984511106588846}
   - component: {fileID: 6506087504527950233}
+  - component: {fileID: 1619422092}
   m_Layer: 0
   m_Name: Package area
   m_TagString: Untagged
@@ -314,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7453470916782352202}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.0631, y: -0.0173, z: 0.005}
+  m_LocalPosition: {x: 0.0631, y: -0.0173, z: 0.0062}
   m_LocalScale: {x: 0.23808159, y: 0.16301271, z: 0.010000006}
   m_Children: []
   m_Father: {fileID: 4333777924045372}
@@ -382,3 +384,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1619422092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7453470916782352202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebb771997cc0f47ca971d2c152943c9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parent: {fileID: 0}

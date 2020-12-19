@@ -27,7 +27,7 @@ public class TutorialLevel : MonoBehaviour
             "Here, you have two package types: \n\n\t* Standard (red) - 15 points - 60 sec.\n\t* No-rush (purple) - 10 points - 50 sec.\n\nEach package type will have its own point value that depends on the delivery speed. The less time you have to deliver the package type, the more points that package is worth. If you fail to make a delivery on time, the point value of that missed package will be deducted from your score.",
             "Now let's try launching a package! To grab a package, left click on the spawned package. Hold, drag, and release the mouse to throw it in the direction of where you want to launch it. Once you throw a package, left click to re-spawn a new package from your inventory.",
             "A house requesting a package will appear as a location on your minimap in the bottom-right corner of your screen. You will also see an arrow spawn above the house, indicating the location on the scene. The bar on the minimap will be colored based on the requested package type and will display the amount of time you have left to deliver a package.",
-            "Let's try navigating towards the house. To navigate the vehicle:\n\tW/S: accelerate forwards/backwards \n\tA/D: Steer left/right\n\n Hitting street objects will result in point deductions, so watch where you drive! The larger the object you hit, the larger the point deductions.",
+            "Let's try navigating towards the house. To navigate the vehicle:\n\tW/S: accelerate forwards/backwards \n\tA/D: Steer left/right\n\n Hitting street objects will result in point deductions, so watch where you drive! The larger the object you hit, the larger the point deductions. Tipping over the truck will result in an automatic fail.",
             "In order to make a successful delivery, the delivery needs to be delivered in an area within the perimeter of the house. Upon a successful delivery, you should hear a doorbell and the arrow above the house should disappear.",
             "For each level, you have 2 minutes to complete as many successful deliveries as possible. In order to move onto the next level, you must exceed the point threshold as specified in the beginning of the level. As you progress through the levels, you will unlock newer package types with greater point values as well as new maps and environments. That's all you need to know for this tutorial, goodluck!"
         };
@@ -106,8 +106,11 @@ public class TutorialLevel : MonoBehaviour
         if (currTextIndex > maxTextIndex)
         {
             SceneManager.LoadScene("Level 1");
+        } else
+        {
+            instructionPanel.GetComponentInChildren<Text>().text = tutorialText[currTextIndex];
         }
-        instructionPanel.GetComponentInChildren<Text>().text = tutorialText[currTextIndex];
+        
         if (currTextIndex == 4)
         {
             buildingExample.transform.Find("Package area").GetComponent<MeshRenderer>().enabled = true;

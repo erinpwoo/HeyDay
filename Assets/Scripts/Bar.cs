@@ -27,6 +27,10 @@ public class Bar : MonoBehaviour
         {
             bar.GetComponent<Image>().color = Color.blue;
         }
+        else if (building.requestedPackageType == "Same day")
+        {
+            bar.GetComponent<Image>().color = new Color(255/255f, 140/255f, 0);
+        }
     }
 
     // Update is called once per frame

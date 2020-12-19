@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8357388206684641783}
   m_Layer: 0
   m_Name: Building_D1
-  m_TagString: Untagged
+  m_TagString: Buildings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,7 +132,7 @@ MonoBehaviour:
   requestedPackageType: 
   player: {fileID: 0}
   timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
-  timerPosition: {fileID: 0}
+  timerPosition: {fileID: 3345279754882120755}
   timer: {fileID: 0}
   isTimerRunning: 0
   doorbell: {fileID: 0}

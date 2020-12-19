@@ -59,6 +59,15 @@ public class Building : MonoBehaviour
             requestedPackageType = null;
             PlayDoorbell();
             Destroy(arrow);
+        } else if (packageType == "Same day")
+        {
+            player.points += 30;
+            timer.GetComponent<Bar>().CancelBarTimer();
+            Destroy(timer);
+            isTimerRunning = false;
+            requestedPackageType = null;
+            PlayDoorbell();
+            Destroy(arrow);
         }
         player.UpdatePointsUI();
     }
@@ -79,6 +88,10 @@ public class Building : MonoBehaviour
         {
             timer.GetComponent<Bar>().time = 40;
         }
+        else if (packageType == "Same day")
+        {
+            timer.GetComponent<Bar>().time = 40;
+        }
         requestedPackageType = packageType;
         timer.GetComponent<Bar>().AnimateBar(timer, this);
         arrow = Instantiate(arrowPrefab, timerPosition.position, arrowPrefab.transform.rotation);
@@ -96,6 +109,10 @@ public class Building : MonoBehaviour
         else if (requestedPackageType == "2-day" && player.points >= 20)
         {
             player.points -= 20;
+        }
+        else if (requestedPackageType == "Same day" && player.points >= 30)
+        {
+            player.points -= 30;
         }
         player.UpdatePointsUI();
         requestedPackageType = null;

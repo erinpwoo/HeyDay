@@ -24,8 +24,13 @@ public class PackageArea : MonoBehaviour
         if (parent.requestedPackageType == null) return;
         if ((other.gameObject.CompareTag("No-rush") && (parent.requestedPackageType == "No-rush")) ||
             (other.gameObject.CompareTag("Standard") && (parent.requestedPackageType == "Standard")) ||
-            (other.gameObject.CompareTag("2-day") && (parent.requestedPackageType == "2-day")))
+            (other.gameObject.CompareTag("2-day") && (parent.requestedPackageType == "2-day")) ||
+            (other.gameObject.CompareTag("Same day") && (parent.requestedPackageType == "Same day")))
         {
+            if (!other.gameObject.GetComponent<DragAndShoot>().isShoot)
+            {
+                return;
+            }
             if (other.gameObject.GetComponent<DragAndShoot>().hasDelivered == true)
             {
                 return;

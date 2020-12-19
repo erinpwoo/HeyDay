@@ -22,6 +22,7 @@ TagManager:
   - Small prop
   - Instruction panel
   - 2-day
+  - Same day
   layers:
   - Default
   - TransparentFX

@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952213875}
   m_LocalRotation: {x: -0, y: 0.0000001192093, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.14192, y: 0.07323, z: 0.008}
-  m_LocalScale: {x: 0.3231769, y: 0.33025712, z: 0.010000003}
+  m_LocalPosition: {x: 0.1652, y: 0.0789, z: 0.008}
+  m_LocalScale: {x: 0.3118216, y: 0.37679705, z: 0.010000003}
   m_Children: []
   m_Father: {fileID: 4041056290451804}
   m_RootOrder: 0
@@ -94,8 +94,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.72979563, y: 1, z: 1}
+  m_Center: {x: 0.13510229, y: 5.5913424e-15, z: 0.00000020801913}
 --- !u!114 &952213877
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,9 +121,10 @@ GameObject:
   - component: {fileID: 33278375293819044}
   - component: {fileID: 23018104493128464}
   - component: {fileID: 64419491001250702}
+  - component: {fileID: 1797048441}
   m_Layer: 0
   m_Name: Building_K
-  m_TagString: Untagged
+  m_TagString: Buildings
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -219,6 +220,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 61009ff9965767047ac1770abfb3355f, type: 3}
+--- !u!114 &1797048441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124859566972604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6af8879c478349458bcc8ca20971ee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requestedPackageType: 
+  player: {fileID: 0}
+  timerPrefab: {fileID: 6739722752965864598, guid: 3e0e9feff54c94d0b8179e7a695fa223, type: 3}
+  timerPosition: {fileID: 9175960784889307073}
+  timer: {fileID: 0}
+  isTimerRunning: 0
+  doorbell: {fileID: 0}
+  arrowPrefab: {fileID: 100002, guid: 0bf73d4b4f2d14346bb56b2164eda25f, type: 3}
+  arrow: {fileID: 0}
 --- !u!1 &1646639913439324
 GameObject:
   m_ObjectHideFlags: 0

@@ -91,6 +91,9 @@ public class TruckController : MonoBehaviour
                 Brake();
             }
             UpdateWheelPoses();
+        } else
+        {
+            Brake();
         }
     }
 

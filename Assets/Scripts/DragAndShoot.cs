@@ -9,7 +9,7 @@ public class DragAndShoot : MonoBehaviour
     public GameObject launchPos;
     private Rigidbody rb;
     public Player player;
-    private bool isShoot;
+    public bool isShoot;
     private bool isMouseDown;
     private Vector3 mOffset;
     private float mZCoord;
